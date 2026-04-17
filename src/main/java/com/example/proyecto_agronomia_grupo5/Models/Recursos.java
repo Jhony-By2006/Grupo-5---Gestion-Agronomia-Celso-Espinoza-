@@ -1,13 +1,11 @@
 package com.example.proyecto_agronomia_grupo5.Models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -16,17 +14,33 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Recursos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id_recurso;
-    private Integer id_proveedor;
-    private String Nombre;
-    private String Tipo;
-    private Double Cantidad;
-    private String Unidad_medida;
-    private Double Costo_unitario;
-    private LocalDate Fecha_ingreso;
 
+    @Column(nullable = false)
+    private Integer id_proveedor;
+
+    @Column(nullable = false, length = 100)
+    private String nombre;
+
+    @Column(nullable = true, length = 50)
+    private String tipo;
+
+    @Column(nullable = false)
+    private Double cantidad;
+
+    @Column(nullable = true, length = 30)
+    private String unidad_medida;
+
+    @Column(nullable = true)
+    private Double costo_unitario;
+
+    @Column(nullable = true)
+    private LocalDate fecha_ingreso;
 }
+
+

@@ -1,12 +1,10 @@
 package com.example.proyecto_agronomia_grupo5.Models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -15,18 +13,30 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 
 public class Inventario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_inventario;
-    private Integer id_administracion;
-    private String nombre;
-    private String descripcion;
-    private Double stock_actual;
-    private Double stock_minimo;
-    private String unidad_medida;
-    private LocalDateTime fecha_actualizacion;
+    @EqualsAndHashCode.Include
 
+    private Integer id_inventario;
+
+    @Column(nullable = false, length = 100)
+    private String nombre;
+
+    @Column(nullable = true, length = 160)
+    private String descripcion;
+
+    @Column(nullable = false)
+    private Double stock_actual;
+
+    @Column(nullable = false)
+    private Double stock_minimo;
+
+    @Column(length = 30)
+    private String unidad_medida;
+
+    private LocalDateTime fecha_actualizacion;
 
 }

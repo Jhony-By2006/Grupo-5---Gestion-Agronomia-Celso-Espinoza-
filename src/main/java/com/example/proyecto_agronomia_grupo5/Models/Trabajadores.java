@@ -1,12 +1,10 @@
 package com.example.proyecto_agronomia_grupo5.Models;
 
 
-import jakarta.persistence.Entity;//Hace que la clase se mapee como tabla en BD
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor; //Constructor con todos los parametros
 import lombok.Data;//Constructor sin parametros
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor; //getters and setters
 
 import java.time.LocalDate;
@@ -16,19 +14,38 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Trabajadores {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id_trabajador;
+
+    @Column(nullable = false)
     private Integer id_administracion;
-    private String NomTrabajador;
-    private String ApeTrabajador;
-    private String DNI;
-    private String Cargo;
-    private String Telefono;
-    private String Email;
-    private LocalDate Fecha_contrato;
-    private String Estado;
+
+    @Column(nullable = false, length = 100)
+    private String nomTrabajador;
+
+    @Column(nullable = false, length = 100)
+    private String apeTrabajador;
+
+    @Column(nullable = false, length = 15)
+    private String dni;
+
+    @Column(nullable = true, length = 80)
+    private String cargo;
+
+    @Column(nullable = true, length = 20)
+    private String telefono;
+
+    @Column(nullable = true, length = 100)
+    private String email;
+
+    @Column(nullable = true)
+    private LocalDate fecha_contrato;
+
+    @Column(nullable = true, length = 20)
+    private String estado;
 
 }

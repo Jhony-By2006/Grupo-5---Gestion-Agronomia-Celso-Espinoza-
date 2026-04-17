@@ -1,12 +1,10 @@
 package com.example.proyecto_agronomia_grupo5.Models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -15,16 +13,28 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @Entity
-
+@EqualsAndHashCode (onlyExplicitlyIncluded = true)
 public class Reporte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Integer id_reporte;
-    private Integer id_administración;
-    private String Titulo;
-    private String Tipo_reporte;
-    private LocalDateTime Fecha_generacion;
-    private String Contenido;
-    // private String generado_por; --- Este me da duda consultar
+
+    @Column(nullable = false)
+    private Integer id_administracion;
+
+    @Column(nullable = false, length = 150)
+    private String titulo;
+
+    @Column(nullable = true, length = 50)
+    private String tipo_reporte;
+
+    @Column(nullable = false)
+    private LocalDateTime fecha_generacion;
+
+    @Column(nullable = true, length = 200)
+    private String contenido;
+
+
 
 }
