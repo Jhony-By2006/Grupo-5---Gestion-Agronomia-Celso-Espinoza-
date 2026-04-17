@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Entity //Hace que la clase mapee como tabla en BD
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Administración {
+public class Administracion {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
