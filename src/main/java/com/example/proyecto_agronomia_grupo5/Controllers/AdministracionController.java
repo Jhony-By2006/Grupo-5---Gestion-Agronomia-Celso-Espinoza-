@@ -7,25 +7,27 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/Administraciones") //chequear esto
-@RequiredArgsConstructor
+@RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
+@RequestMapping("/Administraciones") //Define la dirección web o URL para acceder a esa tabla.
+@RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
+
 
 public class AdministracionController {
-    private final IAdministracionService service; //AdministracionService
+    private final IAdministracionService service; //Es el jefe, contiene la lógica del negocio.
 
-    @GetMapping
+    @GetMapping//Se actuva cuando alguien entra a la URL.
     public List<Administracion> findAll() throws  Exception{
-        return service.findAll();
+        return service.findAll(); //Le pide al jefe que es service que traiga todos los registros
     }
 
-    @PostMapping
+    @PostMapping// Se actuva cuando alguien envia datos es como un guardar de nuevo
+
     public  Administracion save(@RequestBody Administracion administracion) throws Exception{
         return service.save(administracion);
     }
-    // @GetMapping("/{id}")
-   //  @PutMapping("/{id}")
-  //   @DeleteMapping("/{id}")
-
+    /*@GetMapping("/{id}")
+   @PutMapping("/{id}")
+   @DeleteMapping("/{id}")
+   */
 
 }
