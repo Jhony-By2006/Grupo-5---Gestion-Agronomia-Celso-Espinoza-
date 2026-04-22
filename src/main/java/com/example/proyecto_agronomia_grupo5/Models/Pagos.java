@@ -20,7 +20,7 @@ public class Pagos {
     @EqualsAndHashCode.Include
     private Integer id_pago;
 
-    @Column(nullable = false)
+    @Column(nullable = false) // not null
     private Integer id_administracion;
 
     @Column(nullable = false)
@@ -32,7 +32,7 @@ public class Pagos {
     @Column(nullable = false)
     private Double monto;
 
-    @Column(nullable = true, length = 160)
+    @Column(nullable = true, length = 160) //null
     private String concepto;
 
     @Column(nullable = true, length = 20)

@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Implementation;
+package com.example.proyecto_agronomia_grupo5.Service.Implementation;
 
 import com.example.proyecto_agronomia_grupo5.Models.Administracion; //Modelos
 import com.example.proyecto_agronomia_grupo5.Repository.IAdministracionRepository; //Repositorio

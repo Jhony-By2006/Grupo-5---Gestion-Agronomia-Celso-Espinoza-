@@ -11,7 +11,6 @@ import java.util.List;
 @RequestMapping("/Administraciones") //Define la dirección web o URL para acceder a esa tabla.
 @RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
 
-
 public class AdministracionController {
     private final IAdministracionService service; //Es el jefe, contiene la lógica del negocio.
 
