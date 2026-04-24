@@ -20,14 +20,25 @@ public class AdministracionController {
         return service.findAll(); //Le pide al jefe que es service que traiga todos los registros
     }
 
-    @PostMapping// Se actuva cuando alguien envia datos es como un guardar de nuevo
+    @GetMapping("/{id}") //actua cuando alguien entra a la URL con un ID
+    public Administracion findById(@PathVariable Integer id) throws Exception {
+        return service.findById(id);
+    }
+
+    @PostMapping//actua cuando alguien envia datos es como un guardar de nuevo
 
     public  Administracion save(@RequestBody Administracion administracion) throws Exception{
         return service.save(administracion);
     }
-    /*@GetMapping("/{id}")
-   @PutMapping("/{id}")
-   @DeleteMapping("/{id}")
-   */
+
+    @PutMapping("/{id}") //actua cuando alguien envia datos es como un actualizador
+    public Administracion update(@PathVariable Integer id, @RequestBody Administracion administracion) throws Exception {
+        return service.update(administracion, id);
+    }
+
+    @DeleteMapping("/{id}") //actua cuando alguien envia datos es como un borrador
+    public void delete(@PathVariable Integer id) throws Exception {
+        service.delete(id);
+    }
 
 }

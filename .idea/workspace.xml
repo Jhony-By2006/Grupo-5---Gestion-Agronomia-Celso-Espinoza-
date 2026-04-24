@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Administracion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Inventario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Metodo_pago.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Pagos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_final.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_inicial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Proveedor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos_administracion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Reporte.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Trabajadores.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Repository/IAdministracionRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="31" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3CbwBzbMUfTljecR3xSsWkivQow" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/Git/Soluciones Web Y Aplic Dist",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.com.jetbrains.python.highlighting.PythonColorsPage",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="powershell.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProyectoAgronomiaGrupo5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Proyecto_Agronomia_Grupo5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proyecto_agronomia_grupo5.ProyectoAgronomiaGrupo5Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="" />
+      <created>1776667449253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776667449253</updated>
+      <workItem from="1776667451230" duration="42000" />
+      <workItem from="1776701167411" duration="124000" />
+      <workItem from="1777060576162" duration="17000" />
+      <workItem from="1777060624374" duration="2462000" />
+      <workItem from="1777069443690" duration="1315000" />
+      <workItem from="1777071025510" duration="2321000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

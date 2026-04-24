@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor //Crea automáticamente un constructor para todos los campos,es como una independencia
 public class AdministracionService implements IAdministracionService {
     //Autowired
-    private IAdministracionRepository repo;
+    private final IAdministracionRepository repo;
     @Override
     public Administracion save(Administracion administracion) throws Exception {
 
@@ -23,6 +23,7 @@ public class AdministracionService implements IAdministracionService {
     public Administracion update(Administracion administracion, Integer id) throws Exception {
         // En un update, primero verificamos que exista,
         // Con spring detecta que si el ID existe,debe actualizar en lugar de crear uno nuevo
+        administracion.setId_administracion(id);
         return repo.save(administracion);
     }
     @Override
