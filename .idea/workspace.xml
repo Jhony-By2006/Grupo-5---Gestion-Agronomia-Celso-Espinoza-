@@ -5,37 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Administracion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Inventario.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Metodo_pago.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Pagos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_final.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_inicial.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Proveedor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos_administracion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Reporte.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Trabajadores.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Repository/IAdministracionRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5ApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/ProveedorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Repository/IProveedorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/IProveedorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/ProveedorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +19,14 @@
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="31" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +47,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3CbwBzbMUfTljecR3xSsWkivQow" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,7 +64,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Master",
+    "git-widget-placeholder": "Oscar",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -89,27 +74,12 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.com.jetbrains.python.highlighting.PythonColorsPage",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="powershell.exe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="ProyectoAgronomiaGrupo5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Proyecto_Agronomia_Grupo5" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proyecto_agronomia_grupo5.ProyectoAgronomiaGrupo5Application" />
