@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/ProveedorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Repository/IProveedorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/IProveedorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/ProveedorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/Metodo_pagoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Repository/IMetodo_pagoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/IMetodo_pagoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/Implementation/Metodo_pagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,7 +65,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Oscar",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",

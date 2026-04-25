@@ -19,5 +19,4 @@ public interface IAdministracionService {
 
     // 5. Eliminar una administración
     void delete(Integer id) throws Exception;
-
 }
