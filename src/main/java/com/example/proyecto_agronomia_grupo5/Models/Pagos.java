@@ -20,8 +20,9 @@ public class Pagos {
     @EqualsAndHashCode.Include
     private Integer id_pago;
 
-    @Column(nullable = false)
-    private Integer id_administracion;
+    @ManyToOne
+    @JoinColumn(name = "id_administracion", nullable = false)
+    private Administracion administracion;
 
     @Column(nullable = false)
     private Integer id_metodo_pago;
