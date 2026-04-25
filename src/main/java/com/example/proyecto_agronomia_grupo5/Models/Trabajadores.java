@@ -21,8 +21,9 @@ public class Trabajadores {
     @EqualsAndHashCode.Include
     private Integer id_trabajador;
 
-    @Column(nullable = false)
-    private Integer id_administracion;
+    @ManyToOne
+    @JoinColumn(name = "id_administracion", nullable = false)
+    private Administracion administracion;
 
     @Column(nullable = false, length = 100)
     private String nomTrabajador;
