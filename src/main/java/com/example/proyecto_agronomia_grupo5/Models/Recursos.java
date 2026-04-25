@@ -21,8 +21,9 @@ public class Recursos {
     @EqualsAndHashCode.Include
     private Integer id_recurso;
 
-    @Column(nullable = false)
-    private Integer id_proveedor;
+   @ManyToOne
+    @JoinColumn(name = "id_proveedor", nullable = false)
+    private Proveedor proveedor;
 
     @Column(nullable = false, length = 100)
     private String nombre;
