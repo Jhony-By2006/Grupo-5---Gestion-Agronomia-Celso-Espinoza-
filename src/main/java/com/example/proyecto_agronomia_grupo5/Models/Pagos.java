@@ -24,8 +24,9 @@ public class Pagos {
     @JoinColumn(name = "id_administracion", nullable = false)
     private Administracion administracion;
 
-    @Column(nullable = false)
-    private Integer id_metodo_pago;
+    @ManyToOne
+    @JoinColumn(name = "id_metodo_pago", nullable = false)
+    private Metodo_pago metodoPago;
 
     @Column(nullable = false)
     private LocalDate fecha_pago;
