@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor; //getters and setters
 
 import java.time.LocalDate;
+import java.util.List;
 
 @NoArgsConstructor
 @Data
@@ -16,20 +17,19 @@ import java.time.LocalDate;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Administracion {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer id_administracion;
 
     @Column(nullable = false, length = 100) //name= "nombreAdmin"
-    private String nombreAdmin;
+    private String nombre;
 
-    @Column(nullable = false, length =  160)
-    private String descripcion;
+    // RELACIÓN CON REPORTE
+    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
+    private List<Reporte> reportes;
 
-    @Column(nullable = false, length = 100)
-    private String responsable;
-
-    @Column(nullable = false)
-    private LocalDate fecha_registro;
+    // RELACIÓN CON RECURSOS
+    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
+    private List<Recursos_administracion> recursosAdministracion;
 
 }
