@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import com.example.proyecto_agronomia_grupo5.Models.Administracion;
 
 import java.time.LocalDateTime;
 
@@ -20,8 +21,12 @@ public class Reporte {
     @EqualsAndHashCode.Include
     private Integer id_reporte;
 
-    @Column(nullable = false)
-    private Integer id_administracion;
+
+    // relación
+
+    @ManyToOne
+    @JoinColumn(name = "id_administracion", nullable = false)
+    private Administracion administracion;
 
     @Column(nullable = false, length = 150)
     private String titulo;
