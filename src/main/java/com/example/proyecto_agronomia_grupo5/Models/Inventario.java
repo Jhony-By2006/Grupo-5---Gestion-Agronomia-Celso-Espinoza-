@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
 import java.time.LocalDateTime;
 
@@ -38,5 +39,11 @@ public class Inventario {
     private String unidad_medida;
 
     private LocalDateTime fecha_actualizacion;
+
+    @OneToMany(mappedBy = "inventario",cascade = CascadeType.ALL)
+    private List<Producto_inicial> productosIniciales;
+
+    @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL)
+    private  List<Producto_final>productosFinales;
 
 }
