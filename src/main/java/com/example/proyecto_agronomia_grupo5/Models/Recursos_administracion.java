@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import com.example.proyecto_agronomia_grupo5.Models.Administracion;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,24 +15,25 @@ import java.time.LocalDate;
 @Entity
 @EqualsAndHashCode (onlyExplicitlyIncluded = true)
 public class Recursos_administracion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id;
-
-    @Column(nullable = false)
     private Integer id_recurso;
 
-    @Column(nullable = false)
-    private Integer id_administracion;
+    // Relación
+    @ManyToOne
+    @JoinColumn(name = "id_administracion", nullable = false)
+    private Administracion administracion;
 
     @Column(nullable = false)
     private LocalDate fecha_recepcion;
 
     @Column(nullable = false)
-    private Double cantidad_recibida;
+    private Double cantida_recibida;
 
     @Column(nullable = true, length = 160)
     private String observaciones;
+
 
 }
