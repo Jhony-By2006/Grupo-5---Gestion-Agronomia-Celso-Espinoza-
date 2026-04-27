@@ -15,11 +15,11 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Trabajadores {
+public class Trabajador {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_trabajador;
+    private Integer idTrabajador;
 
     @ManyToOne
     @JoinColumn(name = "id_administracion", nullable = false)
@@ -44,7 +44,7 @@ public class Trabajadores {
     private String email;
 
     @Column(nullable = true)
-    private LocalDate fecha_contrato;
+    private LocalDate fechaCsontrato;
 
     @Column(nullable = true, length = 20)
     private String estado;

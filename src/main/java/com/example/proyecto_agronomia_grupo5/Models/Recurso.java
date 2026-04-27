@@ -1,6 +1,5 @@
 package com.example.proyecto_agronomia_grupo5.Models;
 
-import com.example.proyecto_agronomia_grupo5.Models.Inventario;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,29 +9,29 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Producto_inicial {
+public class Recurso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_producto_inicial;
-    //Borramos las dos lineas de cod y las reemplazamos por la relacion de inventirio --> producInicial
-    @ManyToOne
-    @JoinColumn(name = "id_inventario", nullable = false)
-    private Inventario inventario;
+    private Integer id_recurso;
+
+   @ManyToOne
+    @JoinColumn(name = "id_proveedor", nullable = false)
+    private Proveedor proveedor;
 
     @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(nullable = true, length = 160)
-    private String descripcion;
+    @Column(nullable = true, length = 50)
+    private String tipo;
 
     @Column(nullable = false)
-    private Double cantidad_inicial;
+    private Double cantidad;
 
     @Column(nullable = true, length = 30)
     private String unidad_medida;
@@ -42,7 +41,6 @@ public class Producto_inicial {
 
     @Column(nullable = true)
     private LocalDate fecha_ingreso;
-
-    @Column(nullable = true, length = 100)
-    private String proveedor_origen;
 }
+
+

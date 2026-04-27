@@ -6,7 +6,6 @@ import lombok.Data;//Constructor sin parametros
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor; //getters and setters
 
-import java.time.LocalDate;
 import java.util.List;
 
 @NoArgsConstructor
@@ -30,6 +29,6 @@ public class Administracion {
 
     // RELACIÓN CON RECURSOS
     @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
-    private List<Recursos_administracion> recursosAdministracion;
+    private List<RecursosAdministracion> recursosAdministracion;
 
 }

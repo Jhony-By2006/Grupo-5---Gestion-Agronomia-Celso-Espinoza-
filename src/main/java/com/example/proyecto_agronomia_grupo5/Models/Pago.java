@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Pagos {
+public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -26,7 +26,7 @@ public class Pagos {
 
     @ManyToOne
     @JoinColumn(name = "id_metodo_pago", nullable = false)
-    private Metodo_pago metodoPago;
+    private MetodoPago metodoPago;
 
     @Column(nullable = false)
     private LocalDate fecha_pago;

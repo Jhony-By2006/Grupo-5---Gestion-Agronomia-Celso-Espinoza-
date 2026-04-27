@@ -41,9 +41,9 @@ public class Inventario {
     private LocalDateTime fecha_actualizacion;
 
     @OneToMany(mappedBy = "inventario",cascade = CascadeType.ALL)
-    private List<Producto_inicial> productosIniciales;
+    private List<ProductoInicial> productosIniciales;
 
     @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL)
-    private  List<Producto_final>productosFinales;
+    private  List<ProductoFinal>productosFinales;
 
 }

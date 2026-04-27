@@ -7,14 +7,13 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import com.example.proyecto_agronomia_grupo5.Models.Administracion;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
 @EqualsAndHashCode (onlyExplicitlyIncluded = true)
-public class Recursos_administracion {
+public class RecursosAdministracion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,10 +26,10 @@ public class Recursos_administracion {
     private Administracion administracion;
 
     @Column(nullable = false)
-    private LocalDate fecha_recepcion;
+    private LocalDate fechaRecepcion;
 
     @Column(nullable = false)
-    private Double cantida_recibida;
+    private Double cantidaRecibida;
 
     @Column(nullable = true, length = 160)
     private String observaciones;

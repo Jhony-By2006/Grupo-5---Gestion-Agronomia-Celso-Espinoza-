@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Metodo_pago {
+public class MetodoPago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_metodo_pago;
+    private Integer idMetodoPago;
 
     @Column(nullable = false, length = 50)
     private String nombre;

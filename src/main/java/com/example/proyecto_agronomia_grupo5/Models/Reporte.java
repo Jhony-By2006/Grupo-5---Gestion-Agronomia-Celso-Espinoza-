@@ -19,7 +19,7 @@ public class Reporte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_reporte;
+    private Integer idReporte;
 
 
     // relación
@@ -32,10 +32,10 @@ public class Reporte {
     private String titulo;
 
     @Column(nullable = true, length = 50)
-    private String tipo_reporte;
+    private String tipoReporte;
 
     @Column(nullable = false)
-    private LocalDateTime fecha_generacion;
+    private LocalDateTime fechaGeneracion;
 
     @Column(nullable = true, length = 200)
     private String contenido;
