@@ -18,12 +18,27 @@ public class Proveedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
 
-    private Integer id_proveedor;
+    private Integer IdProveedor;
 
     @Column(nullable = false, length = 100)
-    private String nombreProveedor;
+    private String NombreProveedor;
 
     @Column(nullable = false, length = 100)
-    private String apellidoProveedor;
+    private String ApellidoProveedor;
+
+    @Column(nullable = false, length = 20)
+    private int Ruc;
+
+    @Column(nullable = false, length = 20)
+    private String Direccion;
+
+    @Column(nullable = false, length = 20)
+    private int Telefono;
+
+    @Column(nullable = false, length = 20)
+    private String Email;
+
+    @Column(nullable = true, length = 20)
+    private String Estado;
 
 }
