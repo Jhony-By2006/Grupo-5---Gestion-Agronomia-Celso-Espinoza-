@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
