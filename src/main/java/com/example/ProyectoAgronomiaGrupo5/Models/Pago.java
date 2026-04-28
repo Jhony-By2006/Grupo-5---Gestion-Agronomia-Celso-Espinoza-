@@ -18,8 +18,22 @@ public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-<<<<<<< HEAD
-    private Integer id_pago;
+    private Integer idPago;
+
+    @Column(nullable = false)
+    private LocalDate fechaPago;
+
+    @Column(nullable = false)
+    private Double montoPago;
+
+    @Column(nullable = true, length = 160)
+    private String conceptoPago;
+
+    @Column(nullable = true, length = 100)
+    private String comprobantePago;
+
+    @Column(nullable = false)
+    private boolean estadoPago;
 
     @ManyToOne
     @JoinColumn(name = "id_administracion", nullable = false)
@@ -28,40 +42,4 @@ public class Pago {
     @ManyToOne
     @JoinColumn(name = "id_metodo_pago", nullable = false)
     private MetodoPago metodoPago;
-
-    @Column(nullable = false)
-    private LocalDate fecha_pago;
-
-    @Column(nullable = false)
-    private Double monto;
-
-    @Column(nullable = true, length = 160)
-    private String concepto;
-
-    @Column(nullable = true, length = 20)
-    private String estado_pago;
-
-    @Column(nullable = true, length = 100)
-    private String comprobante;
-
-=======
-    private Integer idPago;
-    @Column(nullable = false)
-    private LocalDate fechaPago;
-    @Column(nullable = false)
-    private Double montoPago;
-    @Column(nullable = true, length = 160)
-    private String conceptoPago;
-    @Column(nullable = true, length = 100)
-    private String comprobantePago;
-    @Column(nullable = false)
-    private boolean estadoPago;
-
-    @ManyToOne
-    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
-    private Administracion administracion;
-    @ManyToOne
-    @JoinColumn(name = "idMetodoPago", referencedColumnName = "idMetodoPago", nullable = false)
-    private MetodoPago metodoPago;
->>>>>>> origin/Master
 }

@@ -18,21 +18,6 @@ public class Administracion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-<<<<<<< HEAD
-    private Integer id_administracion;
-
-    @Column(nullable = false, length = 100) //name= "nombreAdmin"
-    private String nombre;
-
-    // RELACIÓN CON REPORTE
-    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
-    private List<Reporte> reportes;
-
-    // RELACIÓN CON RECURSOS
-    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
-    private List<RecursosAdministracion> recursosAdministracion;
-
-=======
 
     private Integer idAdministracion;
     @Column(nullable = false, length = 100) //name= "nombreAdmin"
@@ -45,5 +30,5 @@ public class Administracion {
     // RELACIÓN CON RECURSOS
     @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
     private List<RecursoAdministracion> recursosAdministracion;
->>>>>>> origin/Master
+
 }
