@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @Entity
+//@Table(name="proveedor")
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 
@@ -17,21 +18,21 @@ public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-
     private Integer idProveedor;
+
     @Column(nullable = false, length = 100)
-    private String NombreProveedor;
+    private String nombreProveedor;
     @Column(nullable = false, length = 100)
-    private String ApellidoProveedor;
+    private String apellidoProveedor;
     @Column(nullable = false, length = 20)
-    private String Ruc;
+    private String Proveedor;
     @Column(nullable = false, length = 100)
-    private String Direccion;
+    private String direccionProveedor;
     @Column(nullable = false, length = 20)
-    private String Telefono;
+    private String telefonoProveedor;
     @Column(nullable = false, length = 100)
-    private String Email;
+    private String emailProveedor;
     @Column(nullable = true)
-    private boolean Estado;
+    private boolean estadoProveedor;
 
 }

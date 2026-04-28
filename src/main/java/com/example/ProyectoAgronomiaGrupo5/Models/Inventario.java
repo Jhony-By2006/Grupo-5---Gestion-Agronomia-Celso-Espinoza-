@@ -23,19 +23,19 @@ public class Inventario {
 
     private Integer idInventario;
     @Column(nullable = false, length = 100)
-    private String Nombre;
+    private String nombreInven;
     @Column(nullable = true, length = 160)
-    private String Descripcion;
+    private String descripcionInven;
     @Column(nullable = false)
-    private Double StockActual;
+    private Double stockActualInven;
     @Column(nullable = false)
-    private Double StockMinimo;
+    private Double stockMinimoInven;
     @Column(length = 30)
-    private String UnidadMedida;
+    private String unidadMedidaInven;
     @Column(nullable = false)
-    private boolean EstadoInventario;
+    private boolean estadoInven;
     @Column(nullable = false)
-    private LocalDateTime FechaActualizacion;
+    private LocalDateTime fechaActualizacionInven;
 
     @OneToMany(mappedBy = "inventario",cascade = CascadeType.ALL)
     private List<ProductoInicial> productosIniciales;

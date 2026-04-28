@@ -21,9 +21,9 @@ public class Administracion {
 
     private Integer idAdministracion;
     @Column(nullable = false, length = 100) //name= "nombreAdmin"
-    private String Nombre;
+    private String nombreAdmin;
     @Column(nullable = false)
-    private boolean EstadoAdministracion;
+    private boolean estadoAdmin;
     // RELACIÓN CON REPORTE
     @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
     private List<Reporte> Reportes;

@@ -20,15 +20,15 @@ public class Pago {
     @EqualsAndHashCode.Include
     private Integer idPago;
     @Column(nullable = false)
-    private LocalDate FechaPago;
+    private LocalDate fechaPago;
     @Column(nullable = false)
-    private Double Monto;
+    private Double montoPago;
     @Column(nullable = true, length = 160)
-    private String Concepto;
+    private String conceptoPago;
     @Column(nullable = true, length = 100)
-    private String Comprobante;
+    private String comprobantePago;
     @Column(nullable = false)
-    private boolean EstadoPago;
+    private boolean estadoPago;
 
     @ManyToOne
     @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)

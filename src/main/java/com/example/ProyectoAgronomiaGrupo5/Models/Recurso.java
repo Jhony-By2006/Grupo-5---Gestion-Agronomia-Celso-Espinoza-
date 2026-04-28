@@ -22,26 +22,26 @@ public class Recurso {
     private Integer idRecurso;
 
    @ManyToOne
-    @JoinColumn(name = "idProveedor", referencedColumnName = "idProveedor", nullable = false)
+    @JoinColumn(name = "id_proveedor", nullable = false, foreignKey= @ForeignKey(name="FK_PROVEEDOR"))
     private Proveedor proveedor;
+
     @Column(nullable = false, length = 100)
-    private String Nombre;
+    private String nombreRecurso;
     @Column(nullable = true, length = 50)
-    private String Tipo;
+    private String tipoRecurso;
     @Column(nullable = false)
-    private Double Cantidad;
+    private Double cantidadRecurso;
     @Column(nullable = true, length = 30)
-    private String UnidadMedida;
+    private String unidadMedidaRecurso;
     @Column(nullable = true)
-    private Double CostoUnitario;
+    private Double costoUnitarioRecurso;
     @Column(nullable = true)
-    private LocalDate FechaIngreso;
+    private LocalDate fechaIngresoRecurso;
     @Column(nullable = false)
-    private boolean EstadoRecurso;
+    private boolean estadoRecurso;
 
-    @OneToMany(mappedBy = "Recurso", cascade = CascadeType.ALL)
-    private List<RecursoAdministracion> recursosAdministracion;
-
+//    @OneToMany(mappedBy = "recurso", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<RecursoAdministracion> recursosAdministracion;
 }
 
 

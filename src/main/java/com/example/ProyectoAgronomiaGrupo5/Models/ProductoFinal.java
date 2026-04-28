@@ -23,18 +23,18 @@ public class ProductoFinal {
     @JoinColumn(name = "idInventario", nullable = false)
     private Inventario inventario;
     @Column(nullable = false, length = 100)
-    private String Nombre;
+    private String nombreProdF;
     @Column(nullable = true, length = 160)
-    private String Descripcion;
+    private String descripcionProdF;
     @Column(nullable = false)
-    private Double CantidadProducida;
+    private Double cantidadProducidaProdF;
     @Column(nullable = true, length = 30)
-    private String UnidadMedidaF;
+    private String unidadMedidaProdF;
     @Column(nullable = true)
-    private Double PrecioVenta;
+    private Double precioVentaProdF;
     @Column(nullable = true)
-    private LocalDate FechaProduccion;
+    private LocalDate fechaProduccionProdF;
     @Column(nullable = true)
-    private boolean EstadoProductoF;
+    private boolean estadoProdF;
 
 }

@@ -21,10 +21,12 @@ public class RecursoAdministracion {
     private Integer idRecursoAdministracion;
     // Relación
     @ManyToOne
-    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
+    @JoinColumn(name = "id_administracion", referencedColumnName = "idAdministracion", nullable = false)
     private Administracion administracion;
-    @ManyToOne
-    @JoinColumn(name = "idRecurso", referencedColumnName = "idRecurso", nullable = false)
+
+    @ManyToOne // FK
+    @JoinColumn(name = "id_recurso", nullable = false, foreignKey= @ForeignKey(name="FK_RECURSO_ADMINISTRACION"))
+
     private Recurso recurso;
     @Column(nullable = false)
     private LocalDate FechaRecepcion;

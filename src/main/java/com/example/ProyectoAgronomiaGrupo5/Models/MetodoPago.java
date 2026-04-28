@@ -17,14 +17,11 @@ public class MetodoPago {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer idMetodoPago;
-
     @Column(nullable = false, length = 50)
-    private String Nombre;
-
+    private String nombrePago;
     @Column(nullable = true, length = 160)
-    private String Descripcion;
-
+    private String descripcionPago;
     @Column(nullable = false)
-    private boolean EstadoMetodoPago;
+    private boolean estadoMetodoPago;
 
 }
