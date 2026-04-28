@@ -18,9 +18,15 @@ public class ProductoInicial {
     @EqualsAndHashCode.Include
     private Integer idProductoInicial;
 
+
     @ManyToOne
-    @JoinColumn(name = "id_inventario", nullable = false)
+    @JoinColumn(name = "id_inventario", nullable = false, insertable = false, updatable = false)
     private Inventario inventario;
+
+    @Column(name = "id_inventario", nullable = false)
+    private Integer idInventario;
+
+
 
     @Column(nullable = false, length = 100)
     private String nombreProdI;

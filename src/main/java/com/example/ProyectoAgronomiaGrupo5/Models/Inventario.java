@@ -41,7 +41,6 @@ public class Inventario {
     @Column(nullable = false)
     private LocalDateTime fechaActualizacionInven;
 
-
     @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL)
     private List<ProductoInicial> productosIniciales;
 
