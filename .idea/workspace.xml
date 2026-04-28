@@ -4,108 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="">
-<<<<<<< HEAD
+    <list default="true" id="961b2740-a6b5-4846-b97b-460888e4bc45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Controllers/AdministracionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Administracion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Inventario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Metodo_pago.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Pagos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_final.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Producto_inicial.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Proveedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Recursos_administracion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Reporte.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Models/Trabajadores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Repository/IAdministracionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5ApplicationTests.class" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Administracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Administracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/MetodoPago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/MetodoPago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Pago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoFinal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Proveedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Recurso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/RecursoAdministracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/RecursoAdministracion.java" afterDir="false" />
->>>>>>> origin/Master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="65" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="Master" />
-                    <option name="lastUsedInstant" value="1777333616" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1777333606" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="McpProjectServerCommands">
-    <commands />
-    <urls />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3,
-  &quot;fromUser&quot;: false
-}</component>
-  <component name="ProjectId" id="3CbwBzbMUfTljecR3xSsWkivQow" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -113,92 +18,67 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
+    "JUnit.ProyectoAgronomiaGrupo5ApplicationTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.ProyectoAgronomiaGrupo5Application.executor": "Run",
+    "Spring Boot.Unnamed.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-<<<<<<< HEAD
-    "git-widget-placeholder": "EtuFashin",
-=======
-    "git-widget-placeholder": "Master",
->>>>>>> origin/Master
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/Git/Soluciones Web Y Aplic Dist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="ProyectoAgronomiaGrupo5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ProyectoAgronomiaGrupo5" />
+  <component name="RunManager" selected="Spring Boot.Unnamed">
+    <configuration name="ProyectoAgronomiaGrupo5ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto_Agronomia_Grupo5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.ProyectoAgronomiaGrupo5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.ProyectoAgronomiaGrupo5" />
+      <option name="MAIN_CLASS_NAME" value="com.example.ProyectoAgronomiaGrupo5.ProyectoAgronomiaGrupo5ApplicationTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Proyecto_Agronomia_Grupo5" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProyectoAgronomiaGrupo5.ProyectoAgronomiaGrupo5Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="StructureViewState">
-    <option name="selectedTab" value="Logical" />
+    <list>
+      <item itemvalue="JUnit.ProyectoAgronomiaGrupo5ApplicationTests" />
+      <item itemvalue="Spring Boot.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProyectoAgronomiaGrupo5ApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="" />
-      <created>1776667449253</created>
+      <changelist id="961b2740-a6b5-4846-b97b-460888e4bc45" name="Changes" comment="" />
+      <created>1777352263283</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1776667449253</updated>
-      <workItem from="1776667451230" duration="42000" />
-      <workItem from="1776701167411" duration="124000" />
-      <workItem from="1777060576162" duration="17000" />
-      <workItem from="1777060624374" duration="2462000" />
-      <workItem from="1777069443690" duration="1315000" />
-      <workItem from="1777071025510" duration="2321000" />
-      <workItem from="1777333875949" duration="6944000" />
+      <updated>1777352263283</updated>
+      <workItem from="1777352263289" duration="457000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
-    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
-    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
-    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
