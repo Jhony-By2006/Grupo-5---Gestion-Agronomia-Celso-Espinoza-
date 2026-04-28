@@ -20,25 +20,19 @@ public class Reporte {
     @EqualsAndHashCode.Include
     private Integer idReporte;
 
-
     // relación
-
     @ManyToOne
-    @JoinColumn(name = "id_administracion", nullable = false)
+    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
     private Administracion administracion;
-
     @Column(nullable = false, length = 150)
-    private String titulo;
-
+    private String Titulo;
     @Column(nullable = true, length = 50)
-    private String tipoReporte;
-
+    private String TipoReporte;
     @Column(nullable = false)
-    private LocalDateTime fechaGeneracion;
-
+    private LocalDateTime FechaGeneracion;
     @Column(nullable = true, length = 200)
-    private String contenido;
-
-
+    private String Contenido;
+    @Column(nullable = false)
+    private boolean EstadoReporte;
 
 }

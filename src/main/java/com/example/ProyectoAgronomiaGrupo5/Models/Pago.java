@@ -18,6 +18,7 @@ public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+<<<<<<< HEAD
     private Integer id_pago;
 
     @ManyToOne
@@ -43,4 +44,24 @@ public class Pago {
     @Column(nullable = true, length = 100)
     private String comprobante;
 
+=======
+    private Integer idPago;
+    @Column(nullable = false)
+    private LocalDate fechaPago;
+    @Column(nullable = false)
+    private Double montoPago;
+    @Column(nullable = true, length = 160)
+    private String conceptoPago;
+    @Column(nullable = true, length = 100)
+    private String comprobantePago;
+    @Column(nullable = false)
+    private boolean estadoPago;
+
+    @ManyToOne
+    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
+    private Administracion administracion;
+    @ManyToOne
+    @JoinColumn(name = "idMetodoPago", referencedColumnName = "idMetodoPago", nullable = false)
+    private MetodoPago metodoPago;
+>>>>>>> origin/Master
 }

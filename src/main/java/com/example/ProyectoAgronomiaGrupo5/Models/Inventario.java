@@ -22,23 +22,24 @@ public class Inventario {
     @EqualsAndHashCode.Include
 
     private Integer idInventario;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Master
     @Column(nullable = false, length = 100)
-    private String nombre;
-
+    private String nombreInven;
     @Column(nullable = true, length = 160)
-    private String descripcion;
-
+    private String descripcionInven;
     @Column(nullable = false)
-    private Double stock_actual;
-
+    private Double stockActualInven;
     @Column(nullable = false)
-    private Double stock_minimo;
-
+    private Double stockMinimoInven;
     @Column(length = 30)
-    private String unidad_medida;
-
-    private LocalDateTime fecha_actualizacion;
+    private String unidadMedidaInven;
+    @Column(nullable = false)
+    private boolean estadoInven;
+    @Column(nullable = false)
+    private LocalDateTime fechaActualizacionInven;
 
     @OneToMany(mappedBy = "inventario",cascade = CascadeType.ALL)
     private List<ProductoInicial> productosIniciales;

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aba730cf-ff87-4cd4-9372-6500531fd970" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" afterDir="false" />
@@ -27,6 +28,20 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/IAdministracionService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_agronomia_grupo5/Service/Implementation/AdministracionService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/proyecto_agronomia_grupo5/ProyectoAgronomiaGrupo5ApplicationTests.class" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Administracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Administracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/MetodoPago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/MetodoPago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoFinal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/ProductoInicial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Proveedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/Recurso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/RecursoAdministracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Models/RecursoAdministracion.java" afterDir="false" />
+>>>>>>> origin/Master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +49,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="31" />
+    <option name="cachedIndexableFilesCount" value="65" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -47,6 +62,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Master" />
+                    <option name="lastUsedInstant" value="1777333616" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1777333606" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -86,7 +126,11 @@
     "Spring Boot.ProyectoAgronomiaGrupo5Application.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "EtuFashin",
+=======
+    "git-widget-placeholder": "Master",
+>>>>>>> origin/Master
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -96,6 +140,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "configurable.group.appearance",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -103,8 +148,8 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="ProyectoAgronomiaGrupo5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Proyecto_Agronomia_Grupo5" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proyecto_agronomia_grupo5.ProyectoAgronomiaGrupo5Application" />
+      <module name="ProyectoAgronomiaGrupo5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProyectoAgronomiaGrupo5.ProyectoAgronomiaGrupo5Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,6 +171,7 @@
       <workItem from="1777060624374" duration="2462000" />
       <workItem from="1777069443690" duration="1315000" />
       <workItem from="1777071025510" duration="2321000" />
+      <workItem from="1777333875949" duration="6944000" />
     </task>
     <servers />
   </component>

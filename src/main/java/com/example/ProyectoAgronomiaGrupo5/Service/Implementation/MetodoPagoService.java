@@ -23,7 +23,7 @@ public class MetodoPagoService implements IMetodoPagoService {
     public MetodoPago update(MetodoPago metodo_pago, Integer id) throws Exception {
         // En un update, primero verificamos que exista,
         // Con spring detecta que si el ID existe,debe actualizar en lugar de crear uno nuevo
-        metodo_pago.setId_metodo_pago(id);
+        metodo_pago.setIdMetodoPago(id);
         return repo.save(metodo_pago);
     }
     @Override

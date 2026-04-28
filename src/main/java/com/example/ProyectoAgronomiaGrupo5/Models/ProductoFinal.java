@@ -17,6 +17,7 @@ public class ProductoFinal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+<<<<<<< HEAD
     private Integer id_producto_final;
     //Borramos las dos lineas de cod y las reemplazamos por la relacion de inventirio --> producFinal
     @ManyToOne
@@ -43,5 +44,26 @@ public class ProductoFinal {
 
     @Column(nullable = true, length = 20)
     private String estado;
+=======
+    private Integer idProductoFinal;
+    //Borramos las dos lineas de cod y las reemplazamos por la relacion de inventirio --> producFinal
+    @ManyToOne
+    @JoinColumn(name = "idInventario", nullable = false)
+    private Inventario inventario;
+    @Column(nullable = false, length = 100)
+    private String nombreProdF;
+    @Column(nullable = true, length = 160)
+    private String descripcionProdF;
+    @Column(nullable = false)
+    private Double cantidadProducidaProdF;
+    @Column(nullable = true, length = 30)
+    private String unidadMedidaProdF;
+    @Column(nullable = true)
+    private Double precioVentaProdF;
+    @Column(nullable = true)
+    private LocalDate fechaProduccionProdF;
+    @Column(nullable = true)
+    private boolean estadoProdF;
+>>>>>>> origin/Master
 
 }

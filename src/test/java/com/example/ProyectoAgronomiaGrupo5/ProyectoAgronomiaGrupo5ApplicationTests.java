@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5;
+package com.example.ProyectoAgronomiaGrupo5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

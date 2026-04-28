@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
-@RequestMapping("/Proveedores") //Define la dirección web o URL para acceder a esa tabla.
+@RequestMapping("/Proveedor") //Define la dirección web o URL para acceder a esa tabla.
 @RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
 
 

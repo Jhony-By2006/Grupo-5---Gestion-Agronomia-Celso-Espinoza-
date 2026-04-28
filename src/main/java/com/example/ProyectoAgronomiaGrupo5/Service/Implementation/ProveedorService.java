@@ -23,7 +23,7 @@ public class ProveedorService implements IProveedorService {
     public Proveedor update(Proveedor proveedor, Integer id) throws Exception {
         // En un update, primero verificamos que exista,
         // Con spring detecta que si el ID existe,debe actualizar en lugar de crear uno nuevo
-        proveedor.setId_proveedor(id);
+        proveedor.setIdProveedor(id);
         return repo.save(proveedor);
     }
     @Override

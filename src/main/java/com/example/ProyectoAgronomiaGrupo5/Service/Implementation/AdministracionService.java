@@ -23,7 +23,7 @@ public class AdministracionService implements IAdministracionService {
     public Administracion update(Administracion administracion, Integer id) throws Exception {
         // En un update, primero verificamos que exista,
         // Con spring detecta que si el ID existe,debe actualizar en lugar de crear uno nuevo
-        administracion.setId_administracion(id);
+        administracion.setIdAdministracion(id);
         return repo.save(administracion);
     }
     @Override

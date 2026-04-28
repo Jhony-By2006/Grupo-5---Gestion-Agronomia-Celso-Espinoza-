@@ -20,12 +20,16 @@ public class ProductoInicial {
     private Integer idProductoInicial;
 
     @ManyToOne
+<<<<<<< HEAD
     @JoinColumn(name = "id_inventario", nullable = false, foreignKey = @ForeignKey(name = "FK_PRODUCTOINICIAL_INVENTARIO")
     )
+=======
+    @JoinColumn(name = "idInventario", nullable = false)
+>>>>>>> origin/Master
     private Inventario inventario;
-
     @Column(nullable = false, length = 100)
     private String nombreProdI;
+<<<<<<< HEAD
 
     @Column(nullable = true, length = 160)
     private String descripcionProdI;
@@ -48,3 +52,20 @@ public class ProductoInicial {
     @Column(nullable = false)
     private boolean estadoProdI;
 }
+=======
+    @Column(nullable = true, length = 160)
+    private String descripcionProdI;
+    @Column(nullable = false)
+    private Double cantidadInicialProdI;
+    @Column(nullable = true, length = 30)
+    private String unidadMedidaProdI;
+    @Column(nullable = true)
+    private Double costoUnitarioProdI;
+    @Column(nullable = true)
+    private LocalDate fechaIngresoProdI;
+    @Column(nullable = true, length = 100)
+    private String proveedorOrigenProdI;
+    @Column(nullable = false)
+    private boolean estadoProdI;
+}
+>>>>>>> origin/Master
