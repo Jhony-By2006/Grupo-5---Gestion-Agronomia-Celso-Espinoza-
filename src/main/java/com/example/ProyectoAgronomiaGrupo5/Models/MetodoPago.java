@@ -17,6 +17,11 @@ public class MetodoPago {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer idMetodoPago;
+
+    @ManyToOne
+    @JoinColumn(name = "id_pago", nullable = false)
+    private Pago pago;
+
     @Column(nullable = false, length = 50)
     private String nombrePago;
     @Column(nullable = true, length = 160)

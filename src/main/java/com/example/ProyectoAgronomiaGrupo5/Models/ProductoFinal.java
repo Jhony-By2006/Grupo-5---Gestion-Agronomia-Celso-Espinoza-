@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,10 +19,6 @@ public class ProductoFinal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer idProductoFinal;
-
-    @ManyToOne
-    @JoinColumn(name = "id_inventario", nullable = false)
-    private Inventario inventario;
 
     @Column(nullable = false, length = 100)
     private String nombreProdF;
@@ -43,4 +40,7 @@ public class ProductoFinal {
 
     @Column(nullable = true)
     private boolean estadoProdF;
+
+    @OneToMany(mappedBy = "producto_final", cascade = CascadeType.ALL)
+    private List<ProductoFinal> productosFinales;
 }

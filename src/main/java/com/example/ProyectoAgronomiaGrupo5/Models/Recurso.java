@@ -44,7 +44,4 @@ public class Recurso {
  @Column(nullable = false)
  private boolean estadoRecurso;
 
-
- // @OneToMany(mappedBy = "recurso", cascade = CascadeType.ALL, orphanRemoval = true)
- // private List<RecursoAdministracion> recursosAdministracion;
 }

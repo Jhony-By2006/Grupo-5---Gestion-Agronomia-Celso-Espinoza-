@@ -35,11 +35,4 @@ public class Pago {
     @Column(nullable = false)
     private boolean estadoPago;
 
-    @ManyToOne
-    @JoinColumn(name = "id_administracion", nullable = false)
-    private Administracion administracion;
-
-    @ManyToOne
-    @JoinColumn(name = "id_metodo_pago", nullable = false)
-    private MetodoPago metodoPago;
 }

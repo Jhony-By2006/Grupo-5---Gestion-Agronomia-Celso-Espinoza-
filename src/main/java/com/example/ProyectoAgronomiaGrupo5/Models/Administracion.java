@@ -24,11 +24,20 @@ public class Administracion {
     private String nombreAdmin;
     @Column(nullable = false)
     private boolean estadoAdmin;
-    // RELACIÓN CON REPORTE
-    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
-    private List<Reporte> Reportes;
-    // RELACIÓN CON RECURSOS
-    @OneToMany(mappedBy = "administracion", cascade = CascadeType.ALL)
-    private List<RecursoAdministracion> recursosAdministracion;
 
+    @ManyToOne
+    @JoinColumn(name = "id_inventario", nullable = false)
+    private Inventario inventario;
+    @ManyToOne
+    @JoinColumn(name = "id_recurso_administracion", nullable = false)
+    private RecursoAdministracion recursoAdministracion;
+    @ManyToOne
+    @JoinColumn(name = "id_reporte", nullable = false)
+    private Reporte reporte;
+    @ManyToOne
+    @JoinColumn(name = "id_trabajador", nullable = false)
+    private Trabajador trabajador;
+    @ManyToOne
+    @JoinColumn(name = "id_metodo_pago", nullable = false)
+    private MetodoPago metodoPago;
 }

@@ -20,6 +20,13 @@ public class Inventario {
     @EqualsAndHashCode.Include
     private Integer idInventario;
 
+    @ManyToOne
+    @JoinColumn(name = "id_producto_final", nullable = false)
+    private ProductoFinal productoFinal;
+    @ManyToOne
+    @JoinColumn(name = "id_producto_inicial", nullable = false)
+    private ProductoFinal productoInicial;
+
     @Column(nullable = false, length = 100)
     private String nombreInven;
 
@@ -41,9 +48,4 @@ public class Inventario {
     @Column(nullable = false)
     private LocalDateTime fechaActualizacionInven;
 
-    @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL)
-    private List<ProductoInicial> productosIniciales;
-
-    @OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL)
-    private List<ProductoFinal> productosFinales;
 }

@@ -21,13 +21,9 @@ public class RecursoAdministracion {
     private Integer idRecursoAdministracion;
     // Relación
     @ManyToOne
-    @JoinColumn(name = "id_administracion", referencedColumnName = "idAdministracion", nullable = false)
-    private Administracion administracion;
-
-    @ManyToOne // FK
-    @JoinColumn(name = "id_recurso", nullable = false, foreignKey= @ForeignKey(name="FK_RECURSO_ADMINISTRACION"))
-
+    @JoinColumn(name = "id_recurso", nullable = false)
     private Recurso recurso;
+
     @Column(nullable = false)
     private LocalDate FechaRecepcion;
     @Column(nullable = false)
