@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -19,26 +19,19 @@ public class Proveedor {
     @EqualsAndHashCode.Include
 
     private Integer idProveedor;
-
     @Column(nullable = false, length = 100)
-    private String nombreProveedor;
-
+    private String NombreProveedor;
     @Column(nullable = false, length = 100)
-    private String apellidoProveedor;
-
+    private String ApellidoProveedor;
     @Column(nullable = false, length = 20)
-    private String ruc;
-
+    private String Ruc;
     @Column(nullable = false, length = 100)
-    private String direccion;
-
+    private String Direccion;
     @Column(nullable = false, length = 20)
-    private String telefono;
-
+    private String Telefono;
     @Column(nullable = false, length = 100)
-    private String email;
-
-    @Column(nullable = true, length = 20)
-    private String estado;
+    private String Email;
+    @Column(nullable = true)
+    private boolean Estado;
 
 }

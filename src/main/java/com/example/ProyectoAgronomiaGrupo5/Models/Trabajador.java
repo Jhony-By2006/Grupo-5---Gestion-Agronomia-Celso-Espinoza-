@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -22,31 +22,24 @@ public class Trabajador {
     private Integer idTrabajador;
 
     @ManyToOne
-    @JoinColumn(name = "id_administracion", nullable = false)
+    @JoinColumn(name = "idAdministracion", nullable = false)
     private Administracion administracion;
-
     @Column(nullable = false, length = 100)
-    private String nomTrabajador;
-
+    private String NombreTrabajador;
     @Column(nullable = false, length = 100)
-    private String apeTrabajador;
-
+    private String ApellidosTrabajador;
     @Column(nullable = false, length = 15)
-    private String dni;
-
+    private String Dni;
     @Column(nullable = true, length = 80)
-    private String cargo;
-
+    private String Cargo;
     @Column(nullable = true, length = 20)
-    private String telefono;
-
+    private String Telefono;
     @Column(nullable = true, length = 100)
-    private String email;
+    private String Email;
+    @Column(nullable = true)
+    private LocalDate FechaContratoT;
 
     @Column(nullable = true)
-    private LocalDate fechaCsontrato;
-
-    @Column(nullable = true, length = 20)
-    private String estado;
+    private boolean estado;
 
 }

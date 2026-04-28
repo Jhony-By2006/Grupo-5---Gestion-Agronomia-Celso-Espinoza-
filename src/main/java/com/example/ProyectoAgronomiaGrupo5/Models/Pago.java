@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -18,29 +18,22 @@ public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_pago;
-
-    @ManyToOne
-    @JoinColumn(name = "id_administracion", nullable = false)
-    private Administracion administracion;
-
-    @ManyToOne
-    @JoinColumn(name = "id_metodo_pago", nullable = false)
-    private MetodoPago metodoPago;
-
+    private Integer idPago;
     @Column(nullable = false)
-    private LocalDate fecha_pago;
-
+    private LocalDate FechaPago;
     @Column(nullable = false)
-    private Double monto;
-
+    private Double Monto;
     @Column(nullable = true, length = 160)
-    private String concepto;
-
-    @Column(nullable = true, length = 20)
-    private String estado_pago;
-
+    private String Concepto;
     @Column(nullable = true, length = 100)
-    private String comprobante;
+    private String Comprobante;
+    @Column(nullable = false)
+    private boolean EstadoPago;
 
+    @ManyToOne
+    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
+    private Administracion administracion;
+    @ManyToOne
+    @JoinColumn(name = "idMetodoPago", referencedColumnName = "idMetodoPago", nullable = false)
+    private MetodoPago metodoPago;
 }

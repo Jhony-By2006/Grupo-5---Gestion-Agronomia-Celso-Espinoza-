@@ -1,8 +1,8 @@
-package com.example.proyecto_agronomia_grupo5.Service.Implementation;
+package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
-import com.example.proyecto_agronomia_grupo5.Models.Recurso;
-import com.example.proyecto_agronomia_grupo5.Repository.IRecursoRepository;
-import com.example.proyecto_agronomia_grupo5.Service.IRecursoService;
+import com.example.ProyectoAgronomiaGrupo5.Models.Recurso;
+import com.example.ProyectoAgronomiaGrupo5.Repository.IRecursoRepository;
+import com.example.ProyectoAgronomiaGrupo5.Service.IRecursoService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class RecursoService implements IRecursoService {
     }
     @Override
     public Recurso update(Recurso recurso, Integer id) throws Exception {
-        recurso.setId_recurso(id);
+        recurso.setIdRecurso(id);
         return repo.save(recurso);
     }
     @Override

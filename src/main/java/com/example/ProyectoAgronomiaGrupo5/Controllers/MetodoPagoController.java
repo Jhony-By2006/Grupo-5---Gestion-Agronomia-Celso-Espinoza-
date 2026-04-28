@@ -1,7 +1,7 @@
-package com.example.proyecto_agronomia_grupo5.Controllers;
+package com.example.ProyectoAgronomiaGrupo5.Controllers;
 
-import com.example.proyecto_agronomia_grupo5.Models.MetodoPago;
-import com.example.proyecto_agronomia_grupo5.Service.IMetodoPagoService; //Service
+import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago;
+import com.example.ProyectoAgronomiaGrupo5.Service.IMetodoPagoService; //Service
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

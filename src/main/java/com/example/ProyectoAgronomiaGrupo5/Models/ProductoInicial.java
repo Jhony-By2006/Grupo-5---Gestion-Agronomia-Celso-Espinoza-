@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,27 +20,22 @@ public class ProductoInicial {
     private Integer idProductoInicial;
     //Borramos las dos lineas de cod y las reemplazamos por la relacion de inventirio --> producInicial
     @ManyToOne
-    @JoinColumn(name = "id_inventario", nullable = false)
+    @JoinColumn(name = "idInventario", nullable = false)
     private Inventario inventario;
-
     @Column(nullable = false, length = 100)
-    private String nombre;
-
+    private String Nombre;
     @Column(nullable = true, length = 160)
-    private String descripcion;
-
+    private String Descripcion;
     @Column(nullable = false)
-    private Double cantidadInicial;
-
+    private Double CantidadInicial;
     @Column(nullable = true, length = 30)
-    private String unidadMedida;
-
+    private String UnidadMedidaI;
     @Column(nullable = true)
-    private Double costoUnitario;
-
+    private Double CostoUnitario;
     @Column(nullable = true)
-    private LocalDate fechaIngreso;
-
+    private LocalDate FechaIngreso;
     @Column(nullable = true, length = 100)
-    private String proveedorOrigen;
+    private String ProveedorOrigen;
+    @Column(nullable = false)
+    private boolean EstadoProductoI;
 }

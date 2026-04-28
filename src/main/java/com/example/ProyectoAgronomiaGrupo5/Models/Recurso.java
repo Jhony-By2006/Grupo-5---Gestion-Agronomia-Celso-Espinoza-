@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -8,6 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,29 +19,29 @@ public class Recurso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_recurso;
+    private Integer idRecurso;
 
    @ManyToOne
-    @JoinColumn(name = "id_proveedor", nullable = false)
+    @JoinColumn(name = "idProveedor", referencedColumnName = "idProveedor", nullable = false)
     private Proveedor proveedor;
-
     @Column(nullable = false, length = 100)
-    private String nombre;
-
+    private String Nombre;
     @Column(nullable = true, length = 50)
-    private String tipo;
-
+    private String Tipo;
     @Column(nullable = false)
-    private Double cantidad;
-
+    private Double Cantidad;
     @Column(nullable = true, length = 30)
-    private String unidad_medida;
-
+    private String UnidadMedida;
     @Column(nullable = true)
-    private Double costo_unitario;
-
+    private Double CostoUnitario;
     @Column(nullable = true)
-    private LocalDate fecha_ingreso;
+    private LocalDate FechaIngreso;
+    @Column(nullable = false)
+    private boolean EstadoRecurso;
+
+    @OneToMany(mappedBy = "Recurso", cascade = CascadeType.ALL)
+    private List<RecursoAdministracion> recursosAdministracion;
+
 }
 
 

@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -21,24 +21,21 @@ public class Inventario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
 
-    private Integer id_inventario;
-
+    private Integer idInventario;
     @Column(nullable = false, length = 100)
-    private String nombre;
-
+    private String Nombre;
     @Column(nullable = true, length = 160)
-    private String descripcion;
-
+    private String Descripcion;
     @Column(nullable = false)
-    private Double stock_actual;
-
+    private Double StockActual;
     @Column(nullable = false)
-    private Double stock_minimo;
-
+    private Double StockMinimo;
     @Column(length = 30)
-    private String unidad_medida;
-
-    private LocalDateTime fecha_actualizacion;
+    private String UnidadMedida;
+    @Column(nullable = false)
+    private boolean EstadoInventario;
+    @Column(nullable = false)
+    private LocalDateTime FechaActualizacion;
 
     @OneToMany(mappedBy = "inventario",cascade = CascadeType.ALL)
     private List<ProductoInicial> productosIniciales;

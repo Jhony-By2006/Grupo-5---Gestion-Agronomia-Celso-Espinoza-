@@ -1,4 +1,4 @@
-package com.example.proyecto_agronomia_grupo5.Models;
+package com.example.ProyectoAgronomiaGrupo5.Models;
 
 
 import jakarta.persistence.*;
@@ -19,12 +19,12 @@ public class MetodoPago {
     private Integer idMetodoPago;
 
     @Column(nullable = false, length = 50)
-    private String nombre;
+    private String Nombre;
 
     @Column(nullable = true, length = 160)
-    private String descripcion;
+    private String Descripcion;
 
-    @Column(nullable = false, length = 20)
-    private String estado;
+    @Column(nullable = false)
+    private boolean EstadoMetodoPago;
 
 }

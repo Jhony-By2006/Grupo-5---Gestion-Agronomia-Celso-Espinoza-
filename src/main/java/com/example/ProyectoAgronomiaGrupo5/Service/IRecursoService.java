@@ -1,6 +1,6 @@
-package com.example.proyecto_agronomia_grupo5.Service;
+package com.example.ProyectoAgronomiaGrupo5.Service;
 
-import com.example.proyecto_agronomia_grupo5.Models.Recurso;
+import com.example.ProyectoAgronomiaGrupo5.Models.Recurso;
 
 import java.util.List;
 

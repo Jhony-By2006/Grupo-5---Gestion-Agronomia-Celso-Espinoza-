@@ -1,8 +1,8 @@
-package com.example.proyecto_agronomia_grupo5.Service.Implementation;
+package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
-import com.example.proyecto_agronomia_grupo5.Models.Administracion; //Modelos
-import com.example.proyecto_agronomia_grupo5.Repository.IAdministracionRepository; //Repositorio
-import com.example.proyecto_agronomia_grupo5.Service.IAdministracionService; //Servicio
+import com.example.ProyectoAgronomiaGrupo5.Models.Administracion; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Repository.IAdministracionRepository; //Repositorio
+import com.example.ProyectoAgronomiaGrupo5.Service.IAdministracionService; //Servicio
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class AdministracionService implements IAdministracionService {
     public Administracion update(Administracion administracion, Integer id) throws Exception {
         // En un update, primero verificamos que exista,
         // Con spring detecta que si el ID existe,debe actualizar en lugar de crear uno nuevo
-        administracion.setId_administracion(id);
+        administracion.setIdAdministracion(id);
         return repo.save(administracion);
     }
     @Override

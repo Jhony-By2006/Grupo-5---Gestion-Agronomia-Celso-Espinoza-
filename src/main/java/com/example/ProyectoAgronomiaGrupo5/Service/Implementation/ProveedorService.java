@@ -1,8 +1,8 @@
-package com.example.proyecto_agronomia_grupo5.Service.Implementation;
+package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
-import com.example.proyecto_agronomia_grupo5.Models.Proveedor; //Modelos
-import com.example.proyecto_agronomia_grupo5.Repository.IProveedorRepository; //Repositorio
-import com.example.proyecto_agronomia_grupo5.Service.IProveedorService; //Servicio
+import com.example.ProyectoAgronomiaGrupo5.Models.Proveedor; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Repository.IProveedorRepository; //Repositorio
+import com.example.ProyectoAgronomiaGrupo5.Service.IProveedorService; //Servicio
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

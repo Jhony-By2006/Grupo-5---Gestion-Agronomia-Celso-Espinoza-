@@ -13,26 +13,25 @@ import java.time.LocalDate;
 @Data
 @Entity
 @EqualsAndHashCode (onlyExplicitlyIncluded = true)
-public class RecursosAdministracion {
+public class RecursoAdministracion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id_recurso;
-
+    private Integer idRecursoAdministracion;
     // Relación
     @ManyToOne
-    @JoinColumn(name = "id_administracion", nullable = false)
+    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
     private Administracion administracion;
-
+    @ManyToOne
+    @JoinColumn(name = "idRecurso", referencedColumnName = "idRecurso", nullable = false)
+    private Recurso recurso;
     @Column(nullable = false)
-    private LocalDate fechaRecepcion;
-
+    private LocalDate FechaRecepcion;
     @Column(nullable = false)
-    private Double cantidaRecibida;
-
+    private Double CantidaRecibida;
     @Column(nullable = true, length = 160)
-    private String observaciones;
-
-
+    private String Observaciones;
+    @Column(nullable = false)
+    private boolean EstadoRecursoA;
 }
