@@ -17,30 +17,34 @@ public class ProductoInicial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer IdProductoInicial;
-    //Borramos las dos lineas de cod y las reemplazamos por la relacion de inventirio --> producInicial
+    private Integer idProductoInicial;
+
     @ManyToOne
-    @JoinColumn(name = "IdInventario", nullable = false)
+    @JoinColumn(name = "id_inventario", nullable = false, foreignKey = @ForeignKey(name = "FK_PRODUCTOINICIAL_INVENTARIO")
+    )
     private Inventario inventario;
 
     @Column(nullable = false, length = 100)
-    private String nombre;
+    private String nombreProdI;
 
     @Column(nullable = true, length = 160)
-    private String descripcion;
+    private String descripcionProdI;
 
     @Column(nullable = false)
-    private Double cantidadInicial;
+    private Double cantidadInicialProdI;
 
     @Column(nullable = true, length = 30)
-    private String unidadMedida;
+    private String unidadMedidaProdI;
 
     @Column(nullable = true)
-    private Double costoUnitario;
+    private Double costoUnitarioProdI;
 
     @Column(nullable = true)
-    private LocalDate fechaIngreso;
+    private LocalDate fechaIngresoProdI;
 
     @Column(nullable = true, length = 100)
-    private String proveedorOrigen;
+    private String proveedorOrigenProdI;
+
+    @Column(nullable = false)
+    private boolean estadoProdI;
 }

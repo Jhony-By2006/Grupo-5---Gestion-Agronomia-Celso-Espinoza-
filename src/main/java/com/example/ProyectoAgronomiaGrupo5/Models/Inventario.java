@@ -21,7 +21,7 @@ public class Inventario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
 
-    private Integer id_inventario;
+    private Integer idInventario;
 
     @Column(nullable = false, length = 100)
     private String nombre;

@@ -39,7 +39,4 @@ public class ProductoInicialController {
         service.delete(id);
     }
 
-
-
-
 }
