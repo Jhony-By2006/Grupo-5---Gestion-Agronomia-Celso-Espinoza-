@@ -12,12 +12,21 @@ import java.time.LocalDate;
 @Data
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Table(name = "producto_inicial")
 public class ProductoInicial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer idProductoInicial;
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_inventario", nullable = false, insertable = false, updatable = false)
+    private Inventario inventario;
+
+    @Column(name = "id_inventario", nullable = false)
+    private Integer idInventario;
+
+
 
     @Column(nullable = false, length = 100)
     private String nombreProdI;

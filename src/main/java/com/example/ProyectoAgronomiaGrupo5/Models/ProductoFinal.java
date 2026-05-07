@@ -14,7 +14,6 @@ import java.util.List;
 @Data
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Table(name = "producto_final")
 public class ProductoFinal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,8 +38,9 @@ public class ProductoFinal {
     @Column(nullable = true)
     private LocalDate fechaProduccionProdF;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private boolean estadoProdF;
 
-
+    @OneToMany(mappedBy = "producto_final", cascade = CascadeType.ALL)
+    private List<ProductoFinal> productosFinales;
 }
