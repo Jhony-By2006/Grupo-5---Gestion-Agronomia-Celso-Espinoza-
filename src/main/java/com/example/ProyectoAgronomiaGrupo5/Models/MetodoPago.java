@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table (name = "metodo_pago")
 public class MetodoPago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +24,11 @@ public class MetodoPago {
     private Pago pago;
 
     @Column(nullable = false, length = 50)
-    private String nombrePago;
+    private String nombre;
+
     @Column(nullable = true, length = 160)
-    private String descripcionPago;
+    private String descripcion;
+
     @Column(nullable = false)
     private boolean estadoMetodoPago;
 

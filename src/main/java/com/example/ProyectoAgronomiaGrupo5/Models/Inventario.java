@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table (name = "inventario")
 public class Inventario {
 
     @Id
@@ -23,9 +24,10 @@ public class Inventario {
     @ManyToOne
     @JoinColumn(name = "id_producto_final", nullable = false)
     private ProductoFinal productoFinal;
+
     @ManyToOne
     @JoinColumn(name = "id_producto_inicial", nullable = false)
-    private ProductoFinal productoInicial;
+    private ProductoInicial productoInicial;
 
     @Column(nullable = false, length = 100)
     private String nombreInven;
@@ -43,9 +45,9 @@ public class Inventario {
     private String unidadMedidaInven;
 
     @Column(nullable = false)
-    private boolean estadoInven;
+    private LocalDateTime fechaActualizacionInven;
 
     @Column(nullable = false)
-    private LocalDateTime fechaActualizacionInven;
+    private boolean estadoInven;
 
 }

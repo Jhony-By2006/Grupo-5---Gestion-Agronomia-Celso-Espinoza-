@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table (name = "recurso")
 public class Recurso {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +37,7 @@ public class Recurso {
  private String unidadMedidaRecurso;
 
  @Column(nullable = true)
- private Double costoUnitarioRecurso;
+ private Double costoRecurso;
 
  @Column(nullable = true)
  private LocalDate fechaIngresoRecurso;

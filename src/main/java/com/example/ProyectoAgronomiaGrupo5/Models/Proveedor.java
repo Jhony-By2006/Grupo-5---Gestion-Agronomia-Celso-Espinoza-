@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table(name = "proveedor")
 public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +24,7 @@ public class Proveedor {
     @Column(nullable = false, length = 100)
     private String apellidoProveedor;
 
-    // Se mantiene como String para soportar los ceros a la izquierda y longitud
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false, length = 11)
     private String rucProveedor;
 
     @Column(nullable = false, length = 100)
@@ -36,6 +36,6 @@ public class Proveedor {
     @Column(nullable = false, length = 100)
     private String emailProveedor;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private boolean estadoProveedor;
 }

@@ -14,6 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Table (name = "pago")
 public class Pago {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -21,16 +22,16 @@ public class Pago {
     private Integer idPago;
 
     @Column(nullable = false)
-    private LocalDate fechaPago;
+    private Double monto;
 
     @Column(nullable = false)
-    private Double montoPago;
+    private LocalDate fechaPago;
 
     @Column(nullable = true, length = 160)
-    private String conceptoPago;
+    private String concepto;
 
     @Column(nullable = true, length = 100)
-    private String comprobantePago;
+    private String comprobante;
 
     @Column(nullable = false)
     private boolean estadoPago;

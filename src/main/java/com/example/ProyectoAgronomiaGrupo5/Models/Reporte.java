@@ -14,25 +14,28 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @EqualsAndHashCode (onlyExplicitlyIncluded = true)
+@Table(name = "reporte")
 public class Reporte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer idReporte;
 
-    // relación
-    @ManyToOne
-    @JoinColumn(name = "idAdministracion", referencedColumnName = "idAdministracion", nullable = false)
-    private Administracion administracion;
     @Column(nullable = false, length = 150)
-    private String Titulo;
-    @Column(nullable = true, length = 50)
-    private String TipoReporte;
-    @Column(nullable = false)
-    private LocalDateTime FechaGeneracion;
-    @Column(nullable = true, length = 200)
-    private String Contenido;
-    @Column(nullable = false)
-    private boolean EstadoReporte;
+    private String titulo;
 
+    @Column(nullable = true, length = 50)
+    private String tipoReporte;
+
+    @Column(nullable = false)
+    private LocalDateTime fechaGeneracion;
+
+    @Column(nullable = true, length = 200)
+    private String contenido;
+
+    @Column(nullable = true, length = 100)
+    private String generadoPor; //dato para saber quién hizo el documento
+
+    @Column(nullable = false)
+    private boolean estadoReporte;
 }
