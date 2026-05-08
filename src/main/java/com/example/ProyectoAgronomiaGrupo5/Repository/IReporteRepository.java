@@ -1,4 +1,4 @@
 package com.example.ProyectoAgronomiaGrupo5.Repository;
 
-public interface IPagosRepository {
+public interface IReporteRepository {
 }
