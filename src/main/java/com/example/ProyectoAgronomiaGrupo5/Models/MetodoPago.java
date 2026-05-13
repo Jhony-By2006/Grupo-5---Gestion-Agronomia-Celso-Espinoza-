@@ -19,10 +19,6 @@ public class MetodoPago {
     @EqualsAndHashCode.Include
     private Integer idMetodoPago;
 
-    @ManyToOne
-    @JoinColumn(name = "id_pago", nullable = false)
-    private Pago pago;
-
     @Column(nullable = false, length = 50)
     private String nombre;
 
@@ -30,6 +26,6 @@ public class MetodoPago {
     private String descripcion;
 
     @Column(nullable = false)
-    private boolean estadoMetodoPago;
+    private Boolean estadoMetodoPago;
 
 }

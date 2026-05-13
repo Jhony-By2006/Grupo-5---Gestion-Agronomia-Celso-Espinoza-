@@ -40,7 +40,7 @@ public class ProductoFinal {
     private LocalDate fechaProduccionProdF;
 
     @Column(nullable = false)
-    private boolean estadoProdF;
+    private Boolean estadoProdF;
 
 
 }

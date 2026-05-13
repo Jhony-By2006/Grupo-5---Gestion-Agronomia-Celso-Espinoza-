@@ -35,7 +35,7 @@ public class Administracion {
     private String responsable;
 
     @Column(nullable = false)
-    private boolean estadoAdmin;
+    private Boolean estadoAdmin;
 
 
     @ManyToOne

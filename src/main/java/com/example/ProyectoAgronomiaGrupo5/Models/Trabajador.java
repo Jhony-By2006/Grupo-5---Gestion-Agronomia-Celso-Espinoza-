@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import javax.swing.text.StyledEditorKit;
 import java.time.LocalDate;
 
 @Data
@@ -42,5 +44,5 @@ public class Trabajador {
     private LocalDate fechaContratoT;
 
     @Column(nullable = false)
-    private boolean estado;
+    private Boolean estado;
 }

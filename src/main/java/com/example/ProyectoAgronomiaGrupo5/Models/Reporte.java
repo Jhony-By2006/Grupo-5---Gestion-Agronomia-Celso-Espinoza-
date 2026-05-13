@@ -37,5 +37,5 @@ public class Reporte {
     private String generadoPor; //dato para saber quién hizo el documento
 
     @Column(nullable = false)
-    private boolean estadoReporte;
+    private Boolean estadoReporte;
 }

@@ -48,6 +48,6 @@ public class Inventario {
     private LocalDateTime fechaActualizacionInven;
 
     @Column(nullable = false)
-    private boolean estadoInven;
+    private Boolean estadoInven;
 
 }

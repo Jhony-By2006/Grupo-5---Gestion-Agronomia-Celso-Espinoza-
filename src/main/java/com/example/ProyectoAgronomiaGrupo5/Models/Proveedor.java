@@ -37,5 +37,5 @@ public class Proveedor {
     private String emailProveedor;
 
     @Column(nullable = false)
-    private boolean estadoProveedor;
+    private Boolean estadoProveedor;
 }

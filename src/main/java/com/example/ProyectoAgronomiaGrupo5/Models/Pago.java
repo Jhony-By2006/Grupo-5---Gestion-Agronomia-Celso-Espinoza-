@@ -21,6 +21,11 @@ public class Pago {
     @EqualsAndHashCode.Include
     private Integer idPago;
 
+    @ManyToOne
+    @JoinColumn(name = "id_metodo_pago", nullable = false)
+    private MetodoPago metodoPago;
+
+
     @Column(nullable = false)
     private Double monto;
 
@@ -34,6 +39,6 @@ public class Pago {
     private String comprobante;
 
     @Column(nullable = false)
-    private boolean estadoPago;
+    private Boolean estadoPago;
 
 }

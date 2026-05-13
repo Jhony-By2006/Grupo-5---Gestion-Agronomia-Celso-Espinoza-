@@ -35,5 +35,5 @@ public class RecursoAdministracion {
     private String observaciones;
 
     @Column(nullable = false)
-    private boolean estadoRecursoA;
+    private Boolean estadoRecursoA;
 }

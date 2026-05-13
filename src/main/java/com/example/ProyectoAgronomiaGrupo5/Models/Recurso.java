@@ -43,6 +43,6 @@ public class Recurso {
  private LocalDate fechaIngresoRecurso;
 
  @Column(nullable = false)
- private boolean estadoRecurso;
+ private Boolean estadoRecurso;
 
 }

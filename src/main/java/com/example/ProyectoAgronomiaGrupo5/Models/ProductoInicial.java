@@ -41,5 +41,5 @@ public class ProductoInicial {
     private String proveedorOrigenProdI;
 
     @Column(nullable = false)
-    private boolean estadoProdI;
+    private Boolean estadoProdI;
 }
