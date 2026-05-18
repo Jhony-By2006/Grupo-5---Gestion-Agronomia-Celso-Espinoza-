@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/Inventario")
 @RequiredArgsConstructor
 
-
+@CrossOrigin(origins = "*")
 public class InventarioController {
     private final IInventarioService service;
 

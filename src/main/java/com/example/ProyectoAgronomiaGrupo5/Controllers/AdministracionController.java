@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/Administracion") //Define la dirección web o URL para acceder a esa tabla.
 @RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
 
+@CrossOrigin(origins = "*") //Lo que hace es que angular pueda pedirle datos al backend sin se que se el navegador de bloquee por seguridad
 
 public class AdministracionController {
     private final IAdministracionService service; //Es el jefe, contiene la lógica del negocio.

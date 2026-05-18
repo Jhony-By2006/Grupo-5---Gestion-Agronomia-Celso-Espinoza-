@@ -10,7 +10,7 @@ import java.util.List;
 @RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
 @RequestMapping("/Proveedor") //Define la dirección web o URL para acceder a esa tabla.
 @RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
-
+@CrossOrigin(origins = "*")
 
 public class ProveedorController {
     private final IProveedorService service; //Es el jefe, contiene la lógica del negocio.

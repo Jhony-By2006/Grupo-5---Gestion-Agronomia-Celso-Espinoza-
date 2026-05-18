@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/ProductosFinales")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class ProductoFinalController {
 
     private final IProductoFinalService service;

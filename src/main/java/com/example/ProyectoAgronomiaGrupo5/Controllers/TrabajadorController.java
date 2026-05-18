@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/Trabajadores")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class TrabajadorController {
 
     private final ITrabajadorService service;

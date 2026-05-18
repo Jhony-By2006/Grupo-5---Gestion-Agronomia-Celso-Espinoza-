@@ -10,8 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/Recurso")
 @RequiredArgsConstructor
-
-
+@CrossOrigin(origins = "*")
 public class RecursoController {
     private final IRecursoService service;
 

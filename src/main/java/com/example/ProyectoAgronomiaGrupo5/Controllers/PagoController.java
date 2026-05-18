@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pagos")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class PagoController {
 
     private final IPagosService service;
