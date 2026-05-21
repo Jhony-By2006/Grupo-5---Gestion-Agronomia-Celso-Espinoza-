@@ -1,0 +1,16 @@
+<h2>Crear Reporte</h2>
+
+<form (ngSubmit)="guardar()">
+
+  <label>Título:</label><br>
+  <input type="text" [(ngModel)]="reporte.titulo" name="titulo" required><br><br>
+
+  <label>Descripción:</label><br>
+  <textarea [(ngModel)]="reporte.descripcion" name="descripcion" required></textarea><br><br>
+
+  <label>Fecha:</label><br>
+  <input type="date" [(ngModel)]="reporte.fecha" name="fecha" required><br><br>
+
+  <button type="submit">Guardar</button>
+
+</form>
