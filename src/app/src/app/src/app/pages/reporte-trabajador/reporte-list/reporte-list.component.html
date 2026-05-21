@@ -1,27 +1,73 @@
-<h2>Lista de Reportes</h2>
+<div class="container">
 
-<table border="1" width="100%" cellpadding="8">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Título</th>
-      <th>Descripción</th>
-      <th>Fecha</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
+  <h2 class="title">🌱 Lista de Reportes Agrícolas</h2>
 
-  <tbody>
-    <tr *ngFor="let r of reportes">
-      <td>{{ r.id }}</td>
-      <td>{{ r.titulo }}</td>
-      <td>{{ r.descripcion }}</td>
-      <td>{{ r.fecha }}</td>
-      <td>
-        <button (click)="eliminar(r.id!)">
-          Eliminar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let r of reportes">
+        <td>{{ r.id }}</td>
+        <td>{{ r.titulo }}</td>
+        <td>{{ r.descripcion }}</td>
+        <td>{{ r.fecha }}</td>
+        <td>
+          <button class="btn-delete" (click)="eliminar(r.id!)">
+            🗑 Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
+
+<style>
+.container {
+  background: #f0fff4;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Arial;
+}
+
+.title {
+  color: #2e7d32;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th {
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+}
+
+.table td {
+  border: 1px solid #c8e6c9;
+  padding: 8px;
+  text-align: center;
+}
+
+.btn-delete {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+</style>
