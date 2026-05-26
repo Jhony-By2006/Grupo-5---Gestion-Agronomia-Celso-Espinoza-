@@ -1,45 +1,63 @@
 package com.example.ProyectoAgronomiaGrupo5.Controllers;
 
+import com.example.ProyectoAgronomiaGrupo5.dto.ProveedorDTO;
 import com.example.ProyectoAgronomiaGrupo5.Models.Proveedor;
-import com.example.ProyectoAgronomiaGrupo5.Service.IProveedorService; //Service
+import com.example.ProyectoAgronomiaGrupo5.Service.IProveedorService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
-@RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
-@RequestMapping("/Proveedor") //Define la dirección web o URL para acceder a esa tabla.
-@RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
-@CrossOrigin(origins = "*")
-
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/Proveedor") // Tu ruta original respetando PascalCase
+// @CrossOrigin(origins = "*")
 public class ProveedorController {
-    private final IProveedorService service; //Es el jefe, contiene la lógica del negocio.
 
-    @GetMapping//Se actuva cuando alguien entra a la URL.
-    public List<Proveedor> findAll() throws  Exception{
-        return service.findAll(); //Le pide al jefe que es service que traiga todos los registros
+    private final IProveedorService service;
+    private final ModelMapper modelMapper;
+
+    @GetMapping
+    public ResponseEntity<List<ProveedorDTO>> findAll() throws Exception {
+        // La banda transportadora idéntica a la del profesor
+        List<ProveedorDTO> list = service.findAll().stream().map(e -> modelMapper.map(e, ProveedorDTO.class)).toList();
+
+        return ResponseEntity.ok(list);
     }
 
-    @GetMapping("/{id}") //actua cuando alguien entra a la URL con un ID
-    public Proveedor findById(@PathVariable Integer id) throws Exception {
-        return service.findById(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<ProveedorDTO> findById(@PathVariable Integer id) throws Exception {
+        Proveedor obj = service.findById(id);
+
+        return ResponseEntity.ok(modelMapper.map(obj, ProveedorDTO.class));
     }
 
-    @PostMapping//actua cuando alguien envia datos es como un guardar de nuevo
+    @PostMapping
+    public ResponseEntity<Void> save(@RequestBody ProveedorDTO dto) throws Exception {
+        Proveedor obj = service.save(modelMapper.map(dto, Proveedor.class));
 
-    public  Proveedor save(@RequestBody Proveedor proveedor) throws Exception{
-        return service.save(proveedor);
+        // Construcción dinámica de la URL con el ID del proveedor
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getIdProveedor()).toUri();
+
+        return ResponseEntity.created(location).build();
     }
 
-    @PutMapping("/{id}") //actua cuando alguien envia datos es como un actualizador
-    public Proveedor update(@PathVariable Integer id, @RequestBody Proveedor proveedor) throws Exception {
-        return service.update(proveedor, id);
+    @PutMapping("/{id}")
+    public ResponseEntity<ProveedorDTO> update(@PathVariable Integer id, @RequestBody ProveedorDTO dto) throws Exception {
+        Proveedor obj = service.update(modelMapper.map(dto, Proveedor.class), id);
+
+        return ResponseEntity.ok(modelMapper.map(obj, ProveedorDTO.class));
     }
 
-    @DeleteMapping("/{id}") //actua cuando alguien envia datos es como un borrador
-    public void delete(@PathVariable Integer id) throws Exception {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id) throws Exception {
         service.delete(id);
+
+        return ResponseEntity.noContent().build();
     }
 
 }
-

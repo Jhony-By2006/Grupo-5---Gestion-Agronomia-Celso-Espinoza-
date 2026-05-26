@@ -1,6 +1,7 @@
 package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
 import com.example.ProyectoAgronomiaGrupo5.Models.Recurso;
+import com.example.ProyectoAgronomiaGrupo5.Repository.IGenericRepository;
 import com.example.ProyectoAgronomiaGrupo5.Repository.IRecursoRepository;
 import com.example.ProyectoAgronomiaGrupo5.Service.IRecursoService;
 
@@ -12,8 +13,16 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 
-public class RecursoService implements IRecursoService {
+
+public class RecursoService extends GenericService<Recurso, Integer> implements IRecursoService {
+
     private final IRecursoRepository repo;
+
+    @Override
+    protected IGenericRepository<Recurso, Integer> getRepo() {
+        return repo;
+    }
+    /*
     @Override
     public Recurso save(Recurso recurso)throws Exception {
         return repo.save(recurso);
@@ -36,4 +45,6 @@ public class RecursoService implements IRecursoService {
     public void delete(Integer id) throws Exception {
         repo.deleteById(id);
     }
+
+     */
 }

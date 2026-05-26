@@ -1,8 +1,8 @@
 package com.example.ProyectoAgronomiaGrupo5.Repository;
 
-import com.example.ProyectoAgronomiaGrupo5.Models.Recurso; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Models.Recurso;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+public interface IRecursoRepository extends IGenericRepository<Recurso, Integer> {
 
-public interface IRecursoRepository extends JpaRepository <Recurso, Integer>{
+
 }
