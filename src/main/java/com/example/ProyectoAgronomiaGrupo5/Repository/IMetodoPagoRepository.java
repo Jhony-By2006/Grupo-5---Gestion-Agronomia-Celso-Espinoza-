@@ -1,8 +1,6 @@
 package com.example.ProyectoAgronomiaGrupo5.Repository;
 
-import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago;
 
-import org.springframework.data.jpa.repository.JpaRepository; //JpaRepository
-
-public interface IMetodoPagoRepository extends JpaRepository <MetodoPago, Integer>{
+public interface IMetodoPagoRepository extends IGenericRepository<MetodoPago, Integer> {
 }
