@@ -1,43 +1,60 @@
 package com.example.ProyectoAgronomiaGrupo5.Controllers;
 
+import com.example.ProyectoAgronomiaGrupo5.dto.MetodoPagoDTO;
 import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago;
-import com.example.ProyectoAgronomiaGrupo5.Service.IMetodoPagoService; //Service
+import com.example.ProyectoAgronomiaGrupo5.Service.IMetodoPagoService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
-@RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
-@RequestMapping("/MetodoPago") //Define la dirección web o URL para acceder a esa tabla.
-@RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
-@CrossOrigin(origins = "*")
-
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/MetodoPago")
 public class MetodoPagoController {
-    private final IMetodoPagoService service; //Es el jefe, contiene la lógica del negocio.
 
-    @GetMapping//Se actuva cuando alguien entra a la URL.
-    public List<MetodoPago> findAll() throws  Exception{
-        return service.findAll(); //Le pide al jefe que es service que traiga todos los registros
+    private final IMetodoPagoService service;
+    private final ModelMapper modelMapper;
+
+    @GetMapping
+    public ResponseEntity<List<MetodoPagoDTO>> findAll() throws Exception {
+        List<MetodoPagoDTO> list = service.findAll()
+                .stream()
+                .map(e -> modelMapper.map(e, MetodoPagoDTO.class))
+                .toList();
+        return ResponseEntity.ok(list);
     }
 
-    @GetMapping("/{id}") //actua cuando alguien entra a la URL con un ID
-    public MetodoPago findById(@PathVariable Integer id) throws Exception {
-        return service.findById(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<MetodoPagoDTO> findById(@PathVariable Integer id) throws Exception {
+        MetodoPago obj = service.findById(id);
+        return ResponseEntity.ok(modelMapper.map(obj, MetodoPagoDTO.class));
     }
 
-    @PostMapping//actua cuando alguien envia datos es como un guardar de nuevo
-
-    public MetodoPago save(@RequestBody MetodoPago metodo_pago) throws Exception{
-        return service.save(metodo_pago);
+    @PostMapping
+    public ResponseEntity<Void> save(@RequestBody MetodoPagoDTO dto) throws Exception {
+        MetodoPago obj = service.save(modelMapper.map(dto, MetodoPago.class));
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(obj.getIdMetodoPago())
+                .toUri();
+        return ResponseEntity.created(location).build();
     }
 
-    @PutMapping("/{id}") //actua cuando alguien envia datos es como un actualizador
-    public MetodoPago update(@PathVariable Integer id, @RequestBody MetodoPago metodo_pago) throws Exception {
-        return service.update(metodo_pago, id);
+    @PutMapping("/{id}")
+    public ResponseEntity<MetodoPagoDTO> update(@PathVariable Integer id, @RequestBody MetodoPagoDTO dto) throws Exception {
+        MetodoPago obj = service.update(modelMapper.map(dto, MetodoPago.class), id);
+        return ResponseEntity.ok(modelMapper.map(obj, MetodoPagoDTO.class));
     }
 
-    @DeleteMapping("/{id}") //actua cuando alguien envia datos es como un borrador
-    public void delete(@PathVariable Integer id) throws Exception {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id) throws Exception {
         service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
