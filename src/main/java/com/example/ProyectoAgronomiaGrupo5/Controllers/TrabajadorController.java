@@ -1,42 +1,58 @@
 package com.example.ProyectoAgronomiaGrupo5.Controllers;
 
+import com.example.ProyectoAgronomiaGrupo5.dto.TrabajadorDTO;
 import com.example.ProyectoAgronomiaGrupo5.Models.Trabajador;
 import com.example.ProyectoAgronomiaGrupo5.Service.ITrabajadorService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Trabajadores")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@RequestMapping("/Trabajadores")
 public class TrabajadorController {
 
     private final ITrabajadorService service;
+    private final ModelMapper modelMapper;
 
     @GetMapping
-    public List<Trabajador> findAll() throws Exception {
-        return service.findAll();
+    public ResponseEntity<List<TrabajadorDTO>> findAll() throws Exception {
+        List<TrabajadorDTO> list = service.findAll().stream()
+                .map(e -> modelMapper.map(e, TrabajadorDTO.class))
+                .toList();
+        return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public Trabajador findById(@PathVariable Integer id) throws Exception {
-        return service.findById(id);
+    public ResponseEntity<TrabajadorDTO> findById(@PathVariable Integer id) throws Exception {
+        Trabajador obj = service.findById(id);
+        return ResponseEntity.ok(modelMapper.map(obj, TrabajadorDTO.class));
     }
 
     @PostMapping
-    public Trabajador save(@RequestBody Trabajador trabajador) throws Exception {
-        return service.save(trabajador);
+    public ResponseEntity<Void> save(@RequestBody TrabajadorDTO dto) throws Exception {
+        Trabajador obj = service.save(modelMapper.map(dto, Trabajador.class));
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(obj.getIdTrabajador())
+                .toUri();
+        return ResponseEntity.created(location).build();
     }
 
     @PutMapping("/{id}")
-    public Trabajador update(@PathVariable Integer id, @RequestBody Trabajador trabajador) throws Exception {
-        return service.update(trabajador, id);
+    public ResponseEntity<TrabajadorDTO> update(@PathVariable Integer id, @RequestBody TrabajadorDTO dto) throws Exception {
+        Trabajador obj = service.update(modelMapper.map(dto, Trabajador.class), id);
+        return ResponseEntity.ok(modelMapper.map(obj, TrabajadorDTO.class));
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<Void> delete(@PathVariable Integer id) throws Exception {
         service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }

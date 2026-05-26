@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="961b2740-a6b5-4846-b97b-460888e4bc45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/PagoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IReporteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IPagosService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/PagosService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/ReporteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/TrabajadorDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ReporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ReporteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/TrabajadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/TrabajadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IReporteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IReporteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/ITrabajadorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/ITrabajadorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IReporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/ITrabajadorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/ITrabajadorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ReporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/TrabajadorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/TrabajadorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,26 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ProyectoAgronomiaGrupo5ApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Chuquipoma&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ProyectoAgronomiaGrupo5ApplicationTests.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "899",
+    "RequestMappingsPanelWidth1": "898",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Unnamed.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "RenatoRama",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.Unnamed">
     <configuration name="ProyectoAgronomiaGrupo5ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Proyecto_Agronomia_Grupo5" />
@@ -78,7 +87,7 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Proyecto_Agronomia_Grupo5" />
+      <module name="ProyectoAgronomiaGrupo5" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProyectoAgronomiaGrupo5.ProyectoAgronomiaGrupo5Application" />
       <method v="2">
         <option name="Make" enabled="true" />
