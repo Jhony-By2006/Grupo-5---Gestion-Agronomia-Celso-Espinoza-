@@ -2,6 +2,7 @@ package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
 import com.example.ProyectoAgronomiaGrupo5.Models.Administracion; //Modelos
 import com.example.ProyectoAgronomiaGrupo5.Repository.IAdministracionRepository; //Repositorio
+import com.example.ProyectoAgronomiaGrupo5.Repository.IGenericRepository;
 import com.example.ProyectoAgronomiaGrupo5.Service.IAdministracionService; //Servicio
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,9 +11,16 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor //Crea automáticamente un constructor para todos los campos,es como una independencia
-public class AdministracionService implements IAdministracionService {
-    //Autowired
+public class AdministracionService extends GenericService<Administracion, Integer> implements IAdministracionService {
+
     private final IAdministracionRepository repo;
+
+    @Override
+    protected IGenericRepository<Administracion, Integer> getRepo() {
+        return repo;
+    }
+}
+    /*
     @Override
     public Administracion save(Administracion administracion) throws Exception {
 
@@ -42,4 +50,6 @@ public class AdministracionService implements IAdministracionService {
         // Borra el registro de la base de datos
         repo.deleteById(id);
     }
-}
+
+     */
+
