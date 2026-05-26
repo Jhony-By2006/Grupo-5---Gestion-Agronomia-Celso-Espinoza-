@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="961b2740-a6b5-4846-b97b-460888e4bc45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/PagoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IReporteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IPagosService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/PagosService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/ProductoInicialDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/RecursoAdministracionDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoInicialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/RecursoAdministracionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/RecursoAdministracionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IProductoInicialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IProductoInicialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IRecursoAdministracionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IRecursoAdministracionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IProductoInicialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IProductoInicialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IRecursoAdministracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IRecursoAdministracionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ProductoInicialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ProductoInicialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/RecursoAdministracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/RecursoAdministracionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
