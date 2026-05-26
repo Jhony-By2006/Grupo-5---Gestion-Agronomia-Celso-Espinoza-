@@ -1,10 +1,11 @@
+// src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IAdministracionService.java
 package com.example.ProyectoAgronomiaGrupo5.Service;
 
-import com.example.ProyectoAgronomiaGrupo5.Models.Administracion; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Models.Administracion;
 
-import java.util.List;
+public interface IAdministracionService extends IGenericService<Administracion, Integer>{
 
-public interface IAdministracionService {
+    /*
     // 1. Guardar una nueva administración
     Administracion save(Administracion administracion) throws Exception;
 
@@ -19,4 +20,6 @@ public interface IAdministracionService {
 
     // 5. Eliminar una administración
     void delete(Integer id) throws Exception;
+
+     */
 }
