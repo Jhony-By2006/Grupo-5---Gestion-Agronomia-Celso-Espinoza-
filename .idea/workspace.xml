@@ -5,28 +5,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="961b2740-a6b5-4846-b97b-460888e4bc45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/PagoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IReporteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IPagosService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/PagosService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/InventarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/dto/ProductoFinalDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IPagosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/InventarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/InventarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoFinalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Controllers/ProductoFinalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IInventarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IInventarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IProductoFinalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Repository/IProductoFinalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IInventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IInventarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IProductoFinalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/IProductoFinalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/InventarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ProductoFinalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ProyectoAgronomiaGrupo5/Service/Implementation/ProductoFinalService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="90" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.4204538560478621" />
+      <entry key="MS500" value="1.9904715741156571" />
+      <entry key="S2" value="3.001469574189273" />
+      <entry key="S5" value="3.5245503991665568" />
+      <entry key="S10" value="3.7473992438832133" />
+      <entry key="S30" value="3.957714737091449" />
+      <entry key="S60" value="4.179963176392219" />
+      <entry key="M2" value="4.571500943997453" />
+      <entry key="M5" value="8.363842823921951" />
+      <entry key="M10" value="23.780080074573487" />
+      <entry key="M15" value="38.49526106841581" />
+      <entry key="M30" value="65.01732469337156" />
+      <entry key="H1" value="85.46974962646487" />
+      <entry key="H2" value="98.2128423861811" />
+      <entry key="H4" value="105.33140308204926" />
+      <entry key="D1" value="111.68192513320525" />
+      <entry key="W1" value="112.81070053710978" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="9.242186792168137E-108" />
+      <entry key="MS500" value="3.9430158225062783E-22" />
+      <entry key="S2" value="5.945474888442354E-6" />
+      <entry key="S5" value="0.0155891349678764" />
+      <entry key="S10" value="0.2667913696577935" />
+      <entry key="S30" value="2.0479503260151763" />
+      <entry key="S60" value="3.580270365476543" />
+      <entry key="M2" value="5.048340671455111" />
+      <entry key="M5" value="7.245035149168403" />
+      <entry key="M10" value="8.929167938683673" />
+      <entry key="M15" value="9.743701860800268" />
+      <entry key="M30" value="10.748195663341717" />
+      <entry key="H1" value="11.338908863041228" />
+      <entry key="H2" value="11.660051349955115" />
+      <entry key="H4" value="11.827594162310236" />
+      <entry key="D1" value="11.970920882746592" />
+      <entry key="W1" value="11.99583730172763" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.3188853950737611" />
+      <entry key="MS500" value="1.9618773645931" />
+      <entry key="S2" value="2.9910911702260203" />
+      <entry key="S5" value="3.532614051730794" />
+      <entry key="S10" value="3.9883272378013044" />
+      <entry key="S30" value="5.941626471255825" />
+      <entry key="S60" value="7.70077459323685" />
+      <entry key="M2" value="9.573644091026914" />
+      <entry key="M5" value="15.561825964946904" />
+      <entry key="M10" value="32.66224555993645" />
+      <entry key="M15" value="48.197631173819836" />
+      <entry key="M30" value="75.73771602642243" />
+      <entry key="H1" value="96.7924236764698" />
+      <entry key="H2" value="109.8641078326911" />
+      <entry key="H4" value="117.15442523328215" />
+      <entry key="D1" value="123.65205806656837" />
+      <entry key="W1" value="124.80642462466912" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
@@ -43,24 +116,33 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;JUnit.ProyectoAgronomiaGrupo5ApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ProyectoAgronomiaGrupo5Application.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Chuquipoma&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kyoharo/Java/Proyecto/Grupo-5---Gestion-Agronomia-Celso-Espinoza-&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.Unnamed">
+  <component name="RunManager" selected="Spring Boot.ProyectoAgronomiaGrupo5Application">
     <configuration name="ProyectoAgronomiaGrupo5ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Proyecto_Agronomia_Grupo5" />
       <extension name="coverage">
@@ -77,8 +159,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Proyecto_Agronomia_Grupo5" />
+    <configuration name="ProyectoAgronomiaGrupo5Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProyectoAgronomiaGrupo5" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProyectoAgronomiaGrupo5.ProyectoAgronomiaGrupo5Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -86,13 +168,21 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ProyectoAgronomiaGrupo5ApplicationTests" />
-      <item itemvalue="Spring Boot.Unnamed" />
+      <item itemvalue="Spring Boot.ProyectoAgronomiaGrupo5Application" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProyectoAgronomiaGrupo5ApplicationTests" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -104,6 +194,13 @@
       <workItem from="1777352263289" duration="457000" />
       <workItem from="1778215104167" duration="1712000" />
       <workItem from="1778249883884" duration="7084000" />
+      <workItem from="1779375237161" duration="1429000" />
+      <workItem from="1779478452794" duration="268000" />
+      <workItem from="1779658264667" duration="3906000" />
+      <workItem from="1779718355786" duration="1457000" />
+      <workItem from="1779742932217" duration="4494000" />
+      <workItem from="1779815603154" duration="761000" />
+      <workItem from="1779816482322" duration="1911000" />
     </task>
     <servers />
   </component>

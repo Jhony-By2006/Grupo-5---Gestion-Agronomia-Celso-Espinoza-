@@ -1,8 +1,8 @@
 package com.example.ProyectoAgronomiaGrupo5.Repository;
 
-import com.example.ProyectoAgronomiaGrupo5.Models.Inventario; //Modelos
+import com.example.ProyectoAgronomiaGrupo5.Models.Inventario;
+import org.springframework.stereotype.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface IInventarioRepository extends JpaRepository <Inventario, Integer>{
+@Repository
+public interface IInventarioRepository extends IGenericRepository<Inventario, Integer> {
 }

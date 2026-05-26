@@ -1,6 +1,7 @@
 package com.example.ProyectoAgronomiaGrupo5.Service.Implementation;
 
 import com.example.ProyectoAgronomiaGrupo5.Models.Inventario;
+import com.example.ProyectoAgronomiaGrupo5.Repository.IGenericRepository;
 import com.example.ProyectoAgronomiaGrupo5.Repository.IInventarioRepository;
 import com.example.ProyectoAgronomiaGrupo5.Service.IInventarioService;
 
@@ -12,8 +13,15 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 
-public class InventarioService implements IInventarioService {
+public class InventarioService extends GenericService<Inventario, Integer> implements IInventarioService {
+
     private final IInventarioRepository repo;
+
+    @Override
+    protected IGenericRepository<Inventario, Integer> getRepo() {
+        return repo;
+
+    /*
     @Override
     public Inventario save(Inventario inventario)throws Exception {
         return repo.save(inventario);
@@ -35,5 +43,8 @@ public class InventarioService implements IInventarioService {
     @Override
     public void delete(Integer id) throws Exception {
         repo.deleteById(id);
+    }
+
+     */
     }
 }
