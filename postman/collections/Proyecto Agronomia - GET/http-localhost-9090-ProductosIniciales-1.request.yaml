@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/ProductosIniciales
+url: http://localhost:9090/ProductosIniciales
+method: GET
+order: 4470279710927973

@@ -1,0 +1,26 @@
+$kind: http-request
+name: http://localhost:9090/Trabajadores
+url: http://localhost:9090/Trabajadores
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombreTrabajador\": \"Oscar\",\r
+
+    \    \"apellidosTrabajador\": \"Pascal\",\r
+
+    \    \"dni\": \"12345678\",\r
+
+    \    \"cargo\": \"Desarrollador Backend\",\r
+
+    \    \"telefono\": \"987654321\",\r
+
+    \    \"email\": \"oscar@gmail.com\",\r
+
+    \    \"fechaContratoT\": \"2026-05-12\",\r
+
+    \    \"estado\": true\r
+
+    }"
+order: 1778629549124

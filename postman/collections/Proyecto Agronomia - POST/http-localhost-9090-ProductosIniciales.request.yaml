@@ -1,0 +1,28 @@
+$kind: http-request
+name: http://localhost:9090/ProductosIniciales
+url: http://localhost:9090/ProductosIniciales
+method: POST
+body:
+  type: json
+  content: " {\r
+
+    \        \"idProductoInicial\": 1,\r
+
+    \        \"nombreProdI\": \"Fertilizante Foliar 20-20-20\",\r
+
+    \        \"descripcionProdI\": \"Bidón de 20 litros para cultivos de papa y maíz\",\r
+
+    \        \"cantidadInicialProdI\": 50.0,\r
+
+    \        \"unidadMedidaProdI\": \"Litros\",\r
+
+    \        \"costoUnitarioProdI\": 125.5,\r
+
+    \        \"fechaIngresoProdI\": \"2026-05-12\",\r
+
+    \        \"proveedorOrigenProdI\": \"Agropecuaria Cajamarca S.A.\",\r
+
+    \        \"estadoProdI\": true\r
+
+    \    }"
+order: 3804727837656117

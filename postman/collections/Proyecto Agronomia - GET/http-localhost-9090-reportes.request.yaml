@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/reportes
+url: http://localhost:9090/reportes
+method: GET
+order: 4502996326277391

@@ -1,0 +1,24 @@
+$kind: http-request
+name: http://localhost:9090/Proveedor
+url: http://localhost:9090/Proveedor
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombreProveedor\": \"AgroOnichan\",\r
+
+    \    \"apellidoProveedor\": \"Cajamarca S.A.\",\r
+
+    \    \"rucProveedor\": \"20123456789\",\r
+
+    \    \"direccionProveedor\": \"Av. Vía de Evitamiento Norte 123, Cajamarca\",\r
+
+    \    \"telefonoProveedor\": \"943210987\",\r
+
+    \    \"emailProveedor\": \"ventasOnichan@agrocajamarca.com\",\r
+
+    \    \"estadoProveedor\": true\r
+
+    }"
+order: 4490610295422020

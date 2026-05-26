@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/MetodoPago
+url: http://localhost:9090/MetodoPago
+method: GET
+order: 3750377913674307

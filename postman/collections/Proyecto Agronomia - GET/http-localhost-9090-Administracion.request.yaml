@@ -1,0 +1,44 @@
+$kind: http-request
+name: http://localhost:9090/Administracion
+url: http://localhost:9090/Administracion
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombreAdmin\": \"Registro de Prueba Agronomía\",\r
+
+    \    \"estadoAdmin\": true,\r
+
+    \    \"inventario\": {\r
+
+    \        \"idInventario\": 1\r
+
+    \    },\r
+
+    \    \"recursoAdministracion\": {\r
+
+    \        \"idRecursoAdministracion\": 1\r
+
+    \    },\r
+
+    \    \"reporte\": {\r
+
+    \        \"idReporte\": 1\r
+
+    \    },\r
+
+    \    \"trabajador\": {\r
+
+    \        \"idTrabajador\": 1\r
+
+    \    },\r
+
+    \    \"metodoPago\": {\r
+
+    \        \"idMetodoPago\": 1\r
+
+    \    }\r
+
+    }"
+order: 1777411710744

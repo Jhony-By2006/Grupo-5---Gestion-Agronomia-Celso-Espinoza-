@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/Inventario
+url: http://localhost:9090/Inventario/1
+method: GET
+order: 4463689568627170

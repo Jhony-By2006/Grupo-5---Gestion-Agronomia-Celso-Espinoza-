@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/Trabajadores
+url: http://localhost:9090/Trabajadores
+method: GET
+order: 4461540810537730

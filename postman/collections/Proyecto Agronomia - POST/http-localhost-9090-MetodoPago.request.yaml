@@ -1,0 +1,16 @@
+$kind: http-request
+name: http://localhost:9090/MetodoPago
+url: http://localhost:9090/MetodoPago
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombre\": \"Yape\",\r
+
+    \    \"descripcion\": \"Pago rápido con código QR\",\r
+
+    \    \"estadoMetodoPago\": true\r
+
+    }"
+order: 4498174118628301

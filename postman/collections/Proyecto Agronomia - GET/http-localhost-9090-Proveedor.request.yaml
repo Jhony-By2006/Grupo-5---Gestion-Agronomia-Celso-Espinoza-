@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/Proveedor
+url: http://localhost:9090/Proveedor
+method: GET
+order: 4375424428162804

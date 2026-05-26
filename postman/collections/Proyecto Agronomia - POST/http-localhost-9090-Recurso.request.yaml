@@ -1,0 +1,30 @@
+$kind: http-request
+name: http://localhost:9090/Recurso
+url: http://localhost:9090/Recurso
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"proveedor\": {\r
+
+    \        \"idProveedor\": 9\r
+
+    \    },\r
+
+    \    \"nombreRecurso\": \"Fertilizante Urea Premium\",\r
+
+    \    \"tipoRecurso\": \"Insumo Agrícola\",\r
+
+    \    \"cantidadRecurso\": 50.0,\r
+
+    \    \"unidadMedidaRecurso\": \"Sacos de 50kg\",\r
+
+    \    \"costoRecurso\": 120.50,\r
+
+    \    \"fechaIngresoRecurso\": \"2026-05-12\",\r
+
+    \    \"estadoRecurso\": true\r
+
+    }"
+order: 4503497168885842

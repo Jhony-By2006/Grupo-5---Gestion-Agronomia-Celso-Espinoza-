@@ -1,0 +1,24 @@
+$kind: http-request
+name: http://localhost:9090/RecusoAdministracion
+url: http://localhost:9090/RecusoAdministracion
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"recurso\": {\r
+
+    \        \"idRecurso\": 1\r
+
+    \    },\r
+
+    \    \"fechaRecepcion\": \"2026-05-12\",\r
+
+    \    \"cantidadRecibida\": 50.0,\r
+
+    \    \"observaciones\": \"Se recibió el lote completo en buen estado\",\r
+
+    \    \"estadoRecursoA\": true\r
+
+    }"
+order: 4503546131850011

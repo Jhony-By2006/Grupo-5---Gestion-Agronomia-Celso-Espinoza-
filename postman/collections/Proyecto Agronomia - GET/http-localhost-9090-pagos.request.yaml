@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/pagos
+url: http://localhost:9090/pagos
+method: GET
+order: 4502951126611675

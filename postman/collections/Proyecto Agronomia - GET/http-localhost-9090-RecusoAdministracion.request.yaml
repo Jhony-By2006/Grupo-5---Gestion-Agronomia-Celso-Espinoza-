@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/RecusoAdministracion
+url: http://localhost:9090/RecusoAdministracion
+method: GET
+order: 4416057766453300

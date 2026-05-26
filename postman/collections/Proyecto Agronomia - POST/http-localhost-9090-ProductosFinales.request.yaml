@@ -1,0 +1,24 @@
+$kind: http-request
+name: http://localhost:9090/ProductosFinales
+url: http://localhost:9090/ProductosFinales
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombreProdF\": \"Papa Amarilla Seleccionada\",\r
+
+    \    \"descripcionProdF\": \"Saco de 50kg, variedad amarilla del norte\",\r
+
+    \    \"cantidadProducidaProdF\": 20.0,\r
+
+    \    \"unidadMedidaProdF\": \"Sacos\",\r
+
+    \    \"precioVentaProdF\": 85.50,\r
+
+    \    \"fechaProduccionProdF\": \"2026-05-12\",\r
+
+    \    \"estadoProdF\": true\r
+
+    }"
+order: 4394886451317466

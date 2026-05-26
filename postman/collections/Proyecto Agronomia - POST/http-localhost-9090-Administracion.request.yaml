@@ -1,0 +1,50 @@
+$kind: http-request
+name: http://localhost:9090/Administracion
+url: http://localhost:9090/Administracion
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombre\": \"Gestión Administrativa - Lote Mayo 2026\",\r
+
+    \    \"descripcion\": \"Consolidado de recepción de insumos y reporte mensual de pagos\",\r
+
+    \    \"fechaRegistro\": \"2026-05-12T11:00:00\",\r
+
+    \    \"responsable\": \"Admin_Cajamarca\",\r
+
+    \    \"estadoAdmin\": true,\r
+
+    \    \"inventario\": {\r
+
+    \        \"idInventario\": 1\r
+
+    \    },\r
+
+    \    \"recursoAdministracion\": {\r
+
+    \        \"idRecursoAdministracion\": 1\r
+
+    \    },\r
+
+    \    \"reporte\": {\r
+
+    \        \"idReporte\": 1\r
+
+    \    },\r
+
+    \    \"trabajador\": {\r
+
+    \        \"idTrabajador\": 1\r
+
+    \    },\r
+
+    \    \"metodoPago\": {\r
+
+    \        \"idMetodoPago\": 1\r
+
+    \    }\r
+
+    }"
+order: 4503568665130310

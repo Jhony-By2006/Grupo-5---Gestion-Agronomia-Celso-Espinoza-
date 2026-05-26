@@ -1,0 +1,28 @@
+$kind: http-request
+name: http://localhost:9090/pagos
+url: http://localhost:9090/pagos
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"metodoPago\": {\r
+
+    \        \"idMetodoPago\": 1\r
+
+    \    },\r
+
+    \    \"monto\": 250.00,\r
+
+    \    \"fechaPago\": \"2026-05-12\",\r
+
+    \    \"concepto\" : \"Compra galletas de papa\",\r
+
+    \    \"comprobante\" : \"REC-001\",\r
+
+    \    \"estadoPago\" : true\r
+
+    \    \r
+
+    }"
+order: 4498990992750395

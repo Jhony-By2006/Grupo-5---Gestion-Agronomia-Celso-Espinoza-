@@ -1,0 +1,5 @@
+$kind: http-request
+name: http://localhost:9090/Recurso
+url: http://localhost:9090/Recurso
+method: GET
+order: 4440994034100445
