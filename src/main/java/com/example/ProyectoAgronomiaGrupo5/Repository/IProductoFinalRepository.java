@@ -1,7 +1,8 @@
 package com.example.ProyectoAgronomiaGrupo5.Repository;
 
 import com.example.ProyectoAgronomiaGrupo5.Models.ProductoFinal;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface IProductoFinalRepository extends JpaRepository<ProductoFinal, Integer> {
+@Repository
+public interface IProductoFinalRepository extends IGenericRepository<ProductoFinal, Integer> {
 }

@@ -4,8 +4,9 @@ import com.example.ProyectoAgronomiaGrupo5.Models.Inventario;
 
 import java.util.List;
 
-public interface IInventarioService {
+public interface IInventarioService extends IGenericService<Inventario, Integer> {
 
+    /*
     Inventario save(Inventario inventario) throws Exception;
 
     Inventario update(Inventario inventario, Integer id) throws Exception;
@@ -15,4 +16,6 @@ public interface IInventarioService {
     Inventario findById(Integer id) throws Exception;
 
     void delete(Integer id) throws Exception;
+
+     */
 }
