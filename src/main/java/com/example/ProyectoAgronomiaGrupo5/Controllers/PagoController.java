@@ -5,9 +5,12 @@ import com.example.ProyectoAgronomiaGrupo5.Models.Pago;
 import com.example.ProyectoAgronomiaGrupo5.Service.IPagoService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.net.URI;
 import java.util.List;
@@ -15,41 +18,69 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/pagos")
+@CrossOrigin(origins = "*")
 public class PagoController {
 
     private final IPagoService service;
     private final ModelMapper modelMapper;
 
     @GetMapping
-    public ResponseEntity<List<PagoDTO>> findAll() throws Exception {
-        List<PagoDTO> list = service.findAll()
+    public ResponseEntity<List<EntityModel<PagoDTO>>> findAll() throws Exception {
+        List<EntityModel<PagoDTO>> list = service.findAll()
                 .stream()
-                .map(e -> modelMapper.map(e, PagoDTO.class))
+                .map(e -> {
+                    PagoDTO dto = modelMapper.map(e, PagoDTO.class);
+                    EntityModel<PagoDTO> resource = EntityModel.of(dto);
+                    try {
+                        resource.add(linkTo(methodOn(PagoController.class).findById(e.getIdPago())).withSelfRel());
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    return resource;
+                })
                 .toList();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PagoDTO> findById(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<EntityModel<PagoDTO>> findById(@PathVariable Integer id) throws Exception {
         Pago obj = service.findById(id);
-        return ResponseEntity.ok(modelMapper.map(obj, PagoDTO.class));
+        PagoDTO dto = modelMapper.map(obj, PagoDTO.class);
+
+        EntityModel<PagoDTO> resource = EntityModel.of(dto);
+        resource.add(linkTo(methodOn(PagoController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(PagoController.class).findAll()).withRel("all-pagos"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @PostMapping
-    public ResponseEntity<Void> save(@RequestBody PagoDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<PagoDTO>> save(@RequestBody PagoDTO dto) throws Exception {
         Pago obj = service.save(modelMapper.map(dto, Pago.class));
+        PagoDTO resultDto = modelMapper.map(obj, PagoDTO.class);
+
+        EntityModel<PagoDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(PagoController.class).findById(obj.getIdPago())).withSelfRel());
+        resource.add(linkTo(methodOn(PagoController.class).findAll()).withRel("all-pagos"));
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(obj.getIdPago())
                 .toUri();
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(resource);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PagoDTO> update(@PathVariable Integer id, @RequestBody PagoDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<PagoDTO>> update(@PathVariable Integer id, @RequestBody PagoDTO dto) throws Exception {
         Pago obj = service.update(modelMapper.map(dto, Pago.class), id);
-        return ResponseEntity.ok(modelMapper.map(obj, PagoDTO.class));
+        PagoDTO resultDto = modelMapper.map(obj, PagoDTO.class);
+
+        EntityModel<PagoDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(PagoController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(PagoController.class).findAll()).withRel("all-pagos"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @DeleteMapping("/{id}")

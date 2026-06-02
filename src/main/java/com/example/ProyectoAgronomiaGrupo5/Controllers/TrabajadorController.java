@@ -5,9 +5,12 @@ import com.example.ProyectoAgronomiaGrupo5.Models.Trabajador;
 import com.example.ProyectoAgronomiaGrupo5.Service.ITrabajadorService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.net.URI;
 import java.util.List;
@@ -15,39 +18,65 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/Trabajadores")
+@CrossOrigin(origins = "*")
+
 public class TrabajadorController {
 
     private final ITrabajadorService service;
     private final ModelMapper modelMapper;
 
     @GetMapping
-    public ResponseEntity<List<TrabajadorDTO>> findAll() throws Exception {
-        List<TrabajadorDTO> list = service.findAll().stream()
-                .map(e -> modelMapper.map(e, TrabajadorDTO.class))
-                .toList();
+    public ResponseEntity<List<EntityModel<TrabajadorDTO>>> findAll() throws Exception {
+        List<EntityModel<TrabajadorDTO>> list = service.findAll().stream().map(e -> {
+            TrabajadorDTO dto = modelMapper.map(e, TrabajadorDTO.class);
+            EntityModel<TrabajadorDTO> resource = EntityModel.of(dto);
+            try {
+                resource.add(linkTo(methodOn(TrabajadorController.class).findById(e.getIdTrabajador())).withSelfRel());
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+            return resource;
+        }).toList();
+
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TrabajadorDTO> findById(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<EntityModel<TrabajadorDTO>> findById(@PathVariable Integer id) throws Exception {
         Trabajador obj = service.findById(id);
-        return ResponseEntity.ok(modelMapper.map(obj, TrabajadorDTO.class));
+        TrabajadorDTO dto = modelMapper.map(obj, TrabajadorDTO.class);
+
+        EntityModel<TrabajadorDTO> resource = EntityModel.of(dto);
+        resource.add(linkTo(methodOn(TrabajadorController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(TrabajadorController.class).findAll()).withRel("all-trabajadores"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @PostMapping
-    public ResponseEntity<Void> save(@RequestBody TrabajadorDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<TrabajadorDTO>> save(@RequestBody TrabajadorDTO dto) throws Exception {
         Trabajador obj = service.save(modelMapper.map(dto, Trabajador.class));
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(obj.getIdTrabajador())
-                .toUri();
-        return ResponseEntity.created(location).build();
+        TrabajadorDTO resultDto = modelMapper.map(obj, TrabajadorDTO.class);
+
+        EntityModel<TrabajadorDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(TrabajadorController.class).findById(obj.getIdTrabajador())).withSelfRel());
+        resource.add(linkTo(methodOn(TrabajadorController.class).findAll()).withRel("all-trabajadores"));
+
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getIdTrabajador()).toUri();
+
+        return ResponseEntity.created(location).body(resource);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TrabajadorDTO> update(@PathVariable Integer id, @RequestBody TrabajadorDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<TrabajadorDTO>> update(@PathVariable Integer id, @RequestBody TrabajadorDTO dto) throws Exception {
         Trabajador obj = service.update(modelMapper.map(dto, Trabajador.class), id);
-        return ResponseEntity.ok(modelMapper.map(obj, TrabajadorDTO.class));
+        TrabajadorDTO resultDto = modelMapper.map(obj, TrabajadorDTO.class);
+
+        EntityModel<TrabajadorDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(TrabajadorController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(TrabajadorController.class).findAll()).withRel("all-trabajadores"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @DeleteMapping("/{id}")

@@ -1,58 +1,86 @@
 package com.example.ProyectoAgronomiaGrupo5.Controllers;
 
 import com.example.ProyectoAgronomiaGrupo5.Models.Administracion;
-import com.example.ProyectoAgronomiaGrupo5.Service.IAdministracionService; //Service
+import com.example.ProyectoAgronomiaGrupo5.Service.IAdministracionService;
 import com.example.ProyectoAgronomiaGrupo5.dto.AdministracionDTO;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
 import java.net.URI;
 import java.util.List;
 
-@RestController //Indica que esta clase devuelva datos (JSON) y no páginas web
-@RequestMapping("/Administracion") //Define la dirección web o URL para acceder a esa tabla.
-@RequiredArgsConstructor //Genera el constructor para que Spring inyecte el Service automáticamente.
-
-// @CrossOrigin(origins = "*") //Lo que hace es que angular pueda pedirle datos al backend sin se que se el navegador de bloquee por seguridad
-
+@RestController
+@RequestMapping("/Administracion")
+@RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class AdministracionController {
 
     private final IAdministracionService service;
     private final ModelMapper modelMapper;
 
     @GetMapping
-    public ResponseEntity<List<AdministracionDTO>> findAll() throws Exception {
-        List<AdministracionDTO> list = service.findAll()
+    public ResponseEntity<List<EntityModel<AdministracionDTO>>> findAll() throws Exception {
+        List<EntityModel<AdministracionDTO>> list = service.findAll()
                 .stream()
-                .map(e -> modelMapper.map(e, AdministracionDTO.class))
+                .map(e -> {
+                    AdministracionDTO dto = modelMapper.map(e, AdministracionDTO.class);
+                    EntityModel<AdministracionDTO> resource = EntityModel.of(dto);
+                    try {
+                        resource.add(linkTo(methodOn(AdministracionController.class).findById(e.getIdAdministracion())).withSelfRel());
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    return resource;
+                })
                 .toList();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AdministracionDTO> findById(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<EntityModel<AdministracionDTO>> findById(@PathVariable Integer id) throws Exception {
         Administracion obj = service.findById(id);
-        return ResponseEntity.ok(modelMapper.map(obj, AdministracionDTO.class));
+        AdministracionDTO dto = modelMapper.map(obj, AdministracionDTO.class);
+
+        EntityModel<AdministracionDTO> resource = EntityModel.of(dto);
+        resource.add(linkTo(methodOn(AdministracionController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(AdministracionController.class).findAll()).withRel("all-administracion"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @PostMapping
-    public ResponseEntity<Void> save(@RequestBody AdministracionDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<AdministracionDTO>> save(@RequestBody AdministracionDTO dto) throws Exception {
         Administracion obj = service.save(modelMapper.map(dto, Administracion.class));
+        AdministracionDTO resultDto = modelMapper.map(obj, AdministracionDTO.class);
+
+        EntityModel<AdministracionDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(AdministracionController.class).findById(obj.getIdAdministracion())).withSelfRel());
+        resource.add(linkTo(methodOn(AdministracionController.class).findAll()).withRel("all-administracion"));
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(obj.getIdAdministracion())
                 .toUri();
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(resource);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<AdministracionDTO> update(@PathVariable Integer id, @RequestBody AdministracionDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<AdministracionDTO>> update(@PathVariable Integer id, @RequestBody AdministracionDTO dto) throws Exception {
         Administracion obj = service.update(modelMapper.map(dto, Administracion.class), id);
-        return ResponseEntity.ok(modelMapper.map(obj, AdministracionDTO.class));
+        AdministracionDTO resultDto = modelMapper.map(obj, AdministracionDTO.class);
+
+        EntityModel<AdministracionDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(AdministracionController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(AdministracionController.class).findAll()).withRel("all-administracion"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @DeleteMapping("/{id}")
@@ -61,32 +89,3 @@ public class AdministracionController {
         return ResponseEntity.noContent().build();
     }
 }
-    /*
-    @GetMapping//Se actuva cuando alguien entra a la URL.
-    public List<Administracion> findAll() throws  Exception{
-        return service.findAll(); //Le pide al jefe que es service que traiga todos los registros
-    }
-
-    @GetMapping("/{id}") //actua cuando alguien entra a la URL con un ID
-    public Administracion findById(@PathVariable Integer id) throws Exception {
-        return service.findById(id);
-    }
-
-    @PostMapping//actua cuando alguien envia datos es como un guardar de nuevo
-
-    public  Administracion save(@RequestBody Administracion administracion) throws Exception{
-        return service.save(administracion);
-    }
-
-    @PutMapping("/{id}") //actua cuando alguien envia datos es como un actualizador
-    public Administracion update(@PathVariable Integer id, @RequestBody Administracion administracion) throws Exception {
-        return service.update(administracion, id);
-    }
-
-    @DeleteMapping("/{id}") //actua cuando alguien envia datos es como un borrador
-    public void delete(@PathVariable Integer id) throws Exception {
-        service.delete(id);
-    }
-
-     */
-

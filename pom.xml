@@ -6,7 +6,8 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>4.0.5</version>
-        <relativePath/> </parent>
+        <relativePath/>
+    </parent>
     <groupId>com.example</groupId>
     <artifactId>ProyectoAgronomiaGrupo5</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -51,6 +52,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- Para el nivel 3 de madurez de richardson se instala la independencia Hateoas-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-hateoas</artifactId>
         </dependency>
 
         <dependency>
@@ -113,5 +119,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

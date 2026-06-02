@@ -5,9 +5,12 @@ import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago;
 import com.example.ProyectoAgronomiaGrupo5.Service.IMetodoPagoService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.net.URI;
 import java.util.List;
@@ -15,41 +18,69 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/MetodoPago")
+@CrossOrigin(origins = "*")
 public class MetodoPagoController {
 
     private final IMetodoPagoService service;
     private final ModelMapper modelMapper;
 
     @GetMapping
-    public ResponseEntity<List<MetodoPagoDTO>> findAll() throws Exception {
-        List<MetodoPagoDTO> list = service.findAll()
+    public ResponseEntity<List<EntityModel<MetodoPagoDTO>>> findAll() throws Exception {
+        List<EntityModel<MetodoPagoDTO>> list = service.findAll()
                 .stream()
-                .map(e -> modelMapper.map(e, MetodoPagoDTO.class))
+                .map(e -> {
+                    MetodoPagoDTO dto = modelMapper.map(e, MetodoPagoDTO.class);
+                    EntityModel<MetodoPagoDTO> resource = EntityModel.of(dto);
+                    try {
+                        resource.add(linkTo(methodOn(MetodoPagoController.class).findById(e.getIdMetodoPago())).withSelfRel());
+                    } catch (Exception ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    return resource;
+                })
                 .toList();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<MetodoPagoDTO> findById(@PathVariable Integer id) throws Exception {
+    public ResponseEntity<EntityModel<MetodoPagoDTO>> findById(@PathVariable Integer id) throws Exception {
         MetodoPago obj = service.findById(id);
-        return ResponseEntity.ok(modelMapper.map(obj, MetodoPagoDTO.class));
+        MetodoPagoDTO dto = modelMapper.map(obj, MetodoPagoDTO.class);
+
+        EntityModel<MetodoPagoDTO> resource = EntityModel.of(dto);
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findAll()).withRel("all-metodos-pago"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @PostMapping
-    public ResponseEntity<Void> save(@RequestBody MetodoPagoDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<MetodoPagoDTO>> save(@RequestBody MetodoPagoDTO dto) throws Exception {
         MetodoPago obj = service.save(modelMapper.map(dto, MetodoPago.class));
+        MetodoPagoDTO resultDto = modelMapper.map(obj, MetodoPagoDTO.class);
+
+        EntityModel<MetodoPagoDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findById(obj.getIdMetodoPago())).withSelfRel());
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findAll()).withRel("all-metodos-pago"));
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(obj.getIdMetodoPago())
                 .toUri();
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(resource);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MetodoPagoDTO> update(@PathVariable Integer id, @RequestBody MetodoPagoDTO dto) throws Exception {
+    public ResponseEntity<EntityModel<MetodoPagoDTO>> update(@PathVariable Integer id, @RequestBody MetodoPagoDTO dto) throws Exception {
         MetodoPago obj = service.update(modelMapper.map(dto, MetodoPago.class), id);
-        return ResponseEntity.ok(modelMapper.map(obj, MetodoPagoDTO.class));
+        MetodoPagoDTO resultDto = modelMapper.map(obj, MetodoPagoDTO.class);
+
+        EntityModel<MetodoPagoDTO> resource = EntityModel.of(resultDto);
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findById(id)).withSelfRel());
+        resource.add(linkTo(methodOn(MetodoPagoController.class).findAll()).withRel("all-metodos-pago"));
+
+        return ResponseEntity.ok(resource);
     }
 
     @DeleteMapping("/{id}")
