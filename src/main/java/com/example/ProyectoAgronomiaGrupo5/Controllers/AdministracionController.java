@@ -22,14 +22,14 @@ import java.util.List;
 public class AdministracionController {
 
     private final IAdministracionService service;
-    private final ModelMapper modelMapper;
+    private final ModelMapper administracionMapper;
 
     @GetMapping
     public ResponseEntity<List<EntityModel<AdministracionDTO>>> findAll() throws Exception {
         List<EntityModel<AdministracionDTO>> list = service.findAll()
                 .stream()
                 .map(e -> {
-                    AdministracionDTO dto = modelMapper.map(e, AdministracionDTO.class);
+                    AdministracionDTO dto = administracionMapper.map(e, AdministracionDTO.class);
                     EntityModel<AdministracionDTO> resource = EntityModel.of(dto);
                     try {
                         resource.add(linkTo(methodOn(AdministracionController.class).findById(e.getIdAdministracion())).withSelfRel());
@@ -45,7 +45,7 @@ public class AdministracionController {
     @GetMapping("/{id}")
     public ResponseEntity<EntityModel<AdministracionDTO>> findById(@PathVariable Integer id) throws Exception {
         Administracion obj = service.findById(id);
-        AdministracionDTO dto = modelMapper.map(obj, AdministracionDTO.class);
+        AdministracionDTO dto = administracionMapper.map(obj, AdministracionDTO.class);
 
         EntityModel<AdministracionDTO> resource = EntityModel.of(dto);
         resource.add(linkTo(methodOn(AdministracionController.class).findById(id)).withSelfRel());
@@ -56,8 +56,8 @@ public class AdministracionController {
 
     @PostMapping
     public ResponseEntity<EntityModel<AdministracionDTO>> save(@RequestBody AdministracionDTO dto) throws Exception {
-        Administracion obj = service.save(modelMapper.map(dto, Administracion.class));
-        AdministracionDTO resultDto = modelMapper.map(obj, AdministracionDTO.class);
+        Administracion obj = service.save(administracionMapper.map(dto, Administracion.class));
+        AdministracionDTO resultDto = administracionMapper.map(obj, AdministracionDTO.class);
 
         EntityModel<AdministracionDTO> resource = EntityModel.of(resultDto);
         resource.add(linkTo(methodOn(AdministracionController.class).findById(obj.getIdAdministracion())).withSelfRel());
@@ -73,8 +73,8 @@ public class AdministracionController {
 
     @PutMapping("/{id}")
     public ResponseEntity<EntityModel<AdministracionDTO>> update(@PathVariable Integer id, @RequestBody AdministracionDTO dto) throws Exception {
-        Administracion obj = service.update(modelMapper.map(dto, Administracion.class), id);
-        AdministracionDTO resultDto = modelMapper.map(obj, AdministracionDTO.class);
+        Administracion obj = service.update(administracionMapper.map(dto, Administracion.class), id);
+        AdministracionDTO resultDto = administracionMapper.map(obj, AdministracionDTO.class);
 
         EntityModel<AdministracionDTO> resource = EntityModel.of(resultDto);
         resource.add(linkTo(methodOn(AdministracionController.class).findById(id)).withSelfRel());
