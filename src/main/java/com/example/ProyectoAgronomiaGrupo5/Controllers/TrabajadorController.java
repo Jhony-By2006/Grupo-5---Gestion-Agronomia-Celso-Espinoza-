@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -24,6 +25,7 @@ public class TrabajadorController {
 
     private final ITrabajadorService service;
     private final ModelMapper modelMapper;
+    @PreAuthorize("hasRole('ADMIN')")
 
     @GetMapping
     public ResponseEntity<List<EntityModel<TrabajadorDTO>>> findAll() throws Exception {
