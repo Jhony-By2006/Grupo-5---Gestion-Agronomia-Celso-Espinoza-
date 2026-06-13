@@ -1,10 +1,9 @@
 package com.example.ProyectoAgronomiaGrupo5.dto;
 
-import com.example.ProyectoAgronomiaGrupo5.Models.MetodoPago;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 
 @Data
@@ -12,10 +11,22 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PagoDTO {
     private Integer idPago;
-    private MetodoPago metodoPago;
+
+    @NotNull
+    private Integer idMetodoPago;
+
+    @NotNull
     private Double monto;
+
+    @NotNull
     private LocalDate fechaPago;
+
+    @NotNull
     private String concepto;
+
+    @NotNull
     private String comprobante;
+
+    @NotNull
     private Boolean estadoPago;
 }

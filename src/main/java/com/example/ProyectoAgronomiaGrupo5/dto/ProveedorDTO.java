@@ -1,5 +1,6 @@
 package com.example.ProyectoAgronomiaGrupo5.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,12 +10,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProveedorDTO {
     private Integer idProveedor;
+
+    @NotNull
     private String nombreProveedor;
-    private String apellidoProveedor;
+
+    @NotNull
     private String rucProveedor;
+
     private String direccionProveedor;
     private String telefonoProveedor;
     private String emailProveedor;
-    private Boolean estadoProveedor;
 
+    @NotNull
+    private Boolean estadoProveedor;
 }
