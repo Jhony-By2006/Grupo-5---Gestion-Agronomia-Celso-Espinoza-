@@ -25,11 +25,21 @@ public class JwtUserDetailsService implements UserDetailsService {
         if (usuario == null) {
             throw new UsernameNotFoundException("Usuario no encontrado: " + username);
         }
+
         List<GrantedAuthority> roles = new ArrayList<>();
-        usuario.getRoles().forEach(rol -> roles.add(new SimpleGrantedAuthority(rol.getNombre())));
+        // Cambio 1: prefijo ROLE_ requerido por Spring Security
+        usuario.getRoles().forEach(rol ->
+                roles.add(new SimpleGrantedAuthority("ROLE_" + rol.getNombre()))
+        );
+
+        // Cambio 2: constructor con "activo" incluido
         return new org.springframework.security.core.userdetails.User(
                 usuario.getUsername(),
                 usuario.getPassword(),
+                usuario.getActivo(),  // enabled
+                true,                 // accountNonExpired
+                true,                 // credentialsNonExpired
+                true,                 // accountNonLocked
                 roles
         );
     }

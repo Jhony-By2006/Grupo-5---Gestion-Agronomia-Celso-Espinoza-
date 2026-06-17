@@ -1,5 +1,4 @@
 package com.example.ProyectoAgronomiaGrupo5.security;
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,14 +10,25 @@ import org.springframework.stereotype.Component;
 public class AuthorizeLogic {
     public boolean hasAccess(String path) {
         boolean hasAccess = false;
+
+        // ADMIN = acceso a todo
+        // TRABAJADOR = solo Inventario, ProductoFinal, Reporte, Pago
         String methodRole = switch (path) {
-            case "findAll", "findById" -> "ADMIN,TRABAJADOR";
-            case "save", "update", "delete" -> "ADMIN,TRABAJADOR";
-            default -> "ADMIN";
+
+            // ✅ TRABAJADOR + ADMIN tienen acceso
+            case "findAll", "findById",
+                 "save", "update", "delete" -> "ROLE_ADMIN,ROLE_TRABAJADOR";
+
+            // ✅ Solo ADMIN tiene acceso
+            case "adminOnly" -> "ROLE_ADMIN";
+
+            default -> "ROLE_ADMIN";
         };
+
         String[] methodRoles = methodRole.split(",");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         log.info("Username is: {} ", auth.getName());
+
         for (GrantedAuthority ga : auth.getAuthorities()) {
             String roleUser = ga.getAuthority();
             log.info("Role is: {} ", roleUser);
