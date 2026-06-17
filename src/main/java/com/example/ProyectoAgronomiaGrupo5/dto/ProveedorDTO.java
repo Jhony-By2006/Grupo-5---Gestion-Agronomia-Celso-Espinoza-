@@ -15,6 +15,9 @@ public class ProveedorDTO {
     private String nombreProveedor;
 
     @NotNull
+    private String apellidoProveedor;
+
+    @NotNull
     private String rucProveedor;
 
     private String direccionProveedor;
