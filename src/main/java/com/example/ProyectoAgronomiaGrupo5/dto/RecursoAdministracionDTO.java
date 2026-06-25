@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.time.LocalDate;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +13,8 @@ public class RecursoAdministracionDTO {
 
     @NotNull
     private Integer idRecurso;
+
+    private String nombreRecurso;
 
     @NotNull
     private LocalDate fechaRecepcion;

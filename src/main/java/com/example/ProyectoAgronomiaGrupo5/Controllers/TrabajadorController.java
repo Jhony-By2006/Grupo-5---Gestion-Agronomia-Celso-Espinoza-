@@ -21,11 +21,12 @@ import java.util.List;
 @RequestMapping("/Trabajadores")
 @CrossOrigin(origins = "*")
 
+@PreAuthorize("@authorizeLogic.hasAccess('ACCESO_ADMIN')")
 public class TrabajadorController {
 
     private final ITrabajadorService service;
     private final ModelMapper modelMapper;
-    @PreAuthorize("hasRole('ADMIN')")
+
 
     @GetMapping
     public ResponseEntity<List<EntityModel<TrabajadorDTO>>> findAll() throws Exception {

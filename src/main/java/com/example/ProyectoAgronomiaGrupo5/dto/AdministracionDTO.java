@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -17,7 +17,7 @@ public class AdministracionDTO {
     private String descripcion;
 
     @NotNull
-    private LocalDateTime fechaRegistro;
+    private LocalDate fechaRegistro;
 
     @NotNull
     private String responsable;

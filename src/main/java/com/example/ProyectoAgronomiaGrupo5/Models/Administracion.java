@@ -6,7 +6,7 @@ import lombok.Data;//Constructor sin parametros
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor; //getters and setters
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @NoArgsConstructor
@@ -29,7 +29,7 @@ public class Administracion {
     private String descripcion;
 
     @Column(nullable = false)
-    private LocalDateTime fechaRegistro;
+    private LocalDate fechaRegistro;
 
     @Column(nullable = false, length = 100)
     private String responsable;

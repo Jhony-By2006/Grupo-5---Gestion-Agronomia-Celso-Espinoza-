@@ -15,16 +15,15 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import java.net.URI;
 import java.util.List;
-
 @RestController
 @RequestMapping("/RecusoAdministracion")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@PreAuthorize("@authorizeLogic.hasAccess('ACCESO_ADMIN')")
 public class RecursoAdministracionController {
 
     private final IRecursoAdministracionService service;
     private final ModelMapper modelMapper;
-    @PreAuthorize("hasRole('ADMIN')")
 
     @GetMapping
     public ResponseEntity<List<EntityModel<RecursoAdministracionDTO>>> findAll() throws Exception {
@@ -32,6 +31,7 @@ public class RecursoAdministracionController {
                 .stream()
                 .map(e -> {
                     RecursoAdministracionDTO dto = modelMapper.map(e, RecursoAdministracionDTO.class);
+                    dto.setNombreRecurso(e.getRecurso().getNombreRecurso());
                     EntityModel<RecursoAdministracionDTO> resource = EntityModel.of(dto);
                     try {
                         resource.add(linkTo(methodOn(RecursoAdministracionController.class).findById(e.getIdRecursoAdministracion())).withSelfRel());
@@ -48,6 +48,7 @@ public class RecursoAdministracionController {
     public ResponseEntity<EntityModel<RecursoAdministracionDTO>> findById(@PathVariable Integer id) throws Exception {
         RecursoAdministracion obj = service.findById(id);
         RecursoAdministracionDTO dto = modelMapper.map(obj, RecursoAdministracionDTO.class);
+        dto.setNombreRecurso(obj.getRecurso().getNombreRecurso());
 
         EntityModel<RecursoAdministracionDTO> resource = EntityModel.of(dto);
         resource.add(linkTo(methodOn(RecursoAdministracionController.class).findById(id)).withSelfRel());
@@ -60,6 +61,7 @@ public class RecursoAdministracionController {
     public ResponseEntity<EntityModel<RecursoAdministracionDTO>> save(@RequestBody RecursoAdministracionDTO dto) throws Exception {
         RecursoAdministracion obj = service.save(modelMapper.map(dto, RecursoAdministracion.class));
         RecursoAdministracionDTO resultDto = modelMapper.map(obj, RecursoAdministracionDTO.class);
+        resultDto.setNombreRecurso(obj.getRecurso().getNombreRecurso());
 
         EntityModel<RecursoAdministracionDTO> resource = EntityModel.of(resultDto);
         resource.add(linkTo(methodOn(RecursoAdministracionController.class).findById(obj.getIdRecursoAdministracion())).withSelfRel());
@@ -79,6 +81,7 @@ public class RecursoAdministracionController {
                                                                         @RequestBody RecursoAdministracionDTO dto) throws Exception {
         RecursoAdministracion obj = service.update(modelMapper.map(dto, RecursoAdministracion.class), id);
         RecursoAdministracionDTO resultDto = modelMapper.map(obj, RecursoAdministracionDTO.class);
+        resultDto.setNombreRecurso(obj.getRecurso().getNombreRecurso());
 
         EntityModel<RecursoAdministracionDTO> resource = EntityModel.of(resultDto);
         resource.add(linkTo(methodOn(RecursoAdministracionController.class).findById(id)).withSelfRel());
