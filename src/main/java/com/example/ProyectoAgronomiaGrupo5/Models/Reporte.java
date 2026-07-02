@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @Data
@@ -28,7 +28,7 @@ public class Reporte {
     private String tipoReporte;
 
     @Column(nullable = false)
-    private LocalDateTime fechaGeneracion;
+    private LocalDate fechaGeneracion;
 
     @Column(nullable = true, length = 200)
     private String contenido;

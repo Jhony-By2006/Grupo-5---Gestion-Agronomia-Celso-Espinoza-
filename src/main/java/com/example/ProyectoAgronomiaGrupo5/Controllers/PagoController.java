@@ -3,6 +3,7 @@ package com.example.ProyectoAgronomiaGrupo5.Controllers;
 import com.example.ProyectoAgronomiaGrupo5.dto.PagoDTO;
 import com.example.ProyectoAgronomiaGrupo5.Models.Pago;
 import com.example.ProyectoAgronomiaGrupo5.Service.IPagoService;
+import com.example.ProyectoAgronomiaGrupo5.Service.IMetodoPagoService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.hateoas.EntityModel;
@@ -23,6 +24,7 @@ import java.util.List;
 public class PagoController {
 
     private final IPagoService service;
+    private final IMetodoPagoService metodoPagoService;
     private final ModelMapper modelMapper;
     @PreAuthorize("@authorizeLogic.hasAccess('findAll')")
 
@@ -58,7 +60,10 @@ public class PagoController {
 
     @PostMapping
     public ResponseEntity<EntityModel<PagoDTO>> save(@RequestBody PagoDTO dto) throws Exception {
-        Pago obj = service.save(modelMapper.map(dto, Pago.class));
+        Pago obj = modelMapper.map(dto, Pago.class);
+        obj.setMetodoPago(metodoPagoService.findById(dto.getIdMetodoPago()));
+
+        obj = service.save(obj);
         PagoDTO resultDto = modelMapper.map(obj, PagoDTO.class);
 
         EntityModel<PagoDTO> resource = EntityModel.of(resultDto);
@@ -75,7 +80,10 @@ public class PagoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<EntityModel<PagoDTO>> update(@PathVariable Integer id, @RequestBody PagoDTO dto) throws Exception {
-        Pago obj = service.update(modelMapper.map(dto, Pago.class), id);
+        Pago obj = modelMapper.map(dto, Pago.class);
+        obj.setMetodoPago(metodoPagoService.findById(dto.getIdMetodoPago()));
+
+        obj = service.update(obj, id);
         PagoDTO resultDto = modelMapper.map(obj, PagoDTO.class);
 
         EntityModel<PagoDTO> resource = EntityModel.of(resultDto);

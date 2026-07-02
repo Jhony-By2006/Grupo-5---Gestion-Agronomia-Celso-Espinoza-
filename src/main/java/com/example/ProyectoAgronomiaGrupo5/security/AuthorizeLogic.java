@@ -8,30 +8,26 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class AuthorizeLogic {
-    public boolean hasAccess(String path) {
+    public boolean hasAccess(String permiso) {
         boolean hasAccess = false;
 
-        // ADMIN = acceso a todo
-        // TRABAJADOR = solo Inventario, ProductoFinal, Reporte, Pago
-        String methodRole = switch (path) {
+        String methodRole = switch (permiso) {
 
-            // ✅ TRABAJADOR + ADMIN tienen acceso
-            case "findAll", "findById",
-                 "save", "update", "delete" -> "ROLE_ADMIN,ROLE_TRABAJADOR";
+            // Para cosas como Inventario, Productos (lo que ven ambos)
+            case "ACCESO_COMPARTIDO" -> "ROLE_ADMIN,ROLE_TRABAJADOR";
 
-            // ✅ Solo ADMIN tiene acceso
-            case "adminOnly" -> "ROLE_ADMIN";
+            // Para cosas exclusivas de Administración y Trabajadores
+            case "ACCESO_ADMIN" -> "ROLE_ADMIN";
 
-            default -> "ROLE_ADMIN";
+            default -> "ROLE_ADMIN"; // Si te olvidas de poner algo, por seguridad solo entra el Admin
         };
 
         String[] methodRoles = methodRole.split(",");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        log.info("Username is: {} ", auth.getName());
 
+        // El resto de tu lógica de validación se queda igualita...
         for (GrantedAuthority ga : auth.getAuthorities()) {
             String roleUser = ga.getAuthority();
-            log.info("Role is: {} ", roleUser);
             for (String role : methodRoles) {
                 if (roleUser.equalsIgnoreCase(role)) {
                     hasAccess = true;

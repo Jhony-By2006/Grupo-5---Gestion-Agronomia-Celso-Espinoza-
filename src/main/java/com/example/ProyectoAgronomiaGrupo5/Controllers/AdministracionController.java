@@ -20,11 +20,12 @@ import java.util.List;
 @RequestMapping("/Administracion")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@PreAuthorize("@authorizeLogic.hasAccess('ACCESO_ADMIN')")
 public class AdministracionController {
 
     private final IAdministracionService service;
     private final ModelMapper administracionMapper;
-    @PreAuthorize("hasRole('ADMIN')")
+
 
     @GetMapping
     public ResponseEntity<List<EntityModel<AdministracionDTO>>> findAll() throws Exception {
